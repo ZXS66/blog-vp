@@ -49,11 +49,17 @@ date: 2021-10-16 22:15:25
 
 ### Emoji 搜索
 
-[<i class="mdui-icon material-icons">search</i> Emoji 搜索工具](/app/#/lab/emoji)
+<script setup>
+import { ref } from 'vue';
+import { BLOG_HOST } from "./constants";
+  const emojiSearchTool = `${BLOG_HOST}/ng/#/lab/emoji`;
+</script>
+
+[<i class="mdui-icon material-icons">search</i> Emoji 搜索工具]({{ emojiSearchTool }})
 
 ### Emoji 清单
 
-我已整理当前完整的 `Emoji` 清单(v14.0)，请 [点击这里](/images/emoji-knowledge-review/full-emoji-list.json) 查收。
+我已整理当前完整的 `Emoji` 清单(v14.0)，请 [点击这里](/img/emoji-knowledge-review/full-emoji-list.json) 查收。
 
 - Smileys & Emotion
   😀 😃 😄 😁 😆 😅 🤣 😂 🙂 🙃 🫠 😉 😊 😇 🥰 😍 🤩 😘 😗 ☺️ ☺ 😚 😙 🥲 😋 😛 😜 🤪 😝 🤑 🤗 🤭 🫢 🫣 🤫 🤔 🫡 🤐 🤨 😐 😑 😶 🫥 😶‍🌫️ 😶‍🌫 😏 😒 🙄 😬 😮‍💨 🤥 😌 😔 😪 🤤 😴 😷 🤒 🤕 🤢 🤮 🤧 🥵 🥶 🥴 😵 😵‍💫 🤯 🤠 🥳 🥸 😎 🤓 🧐 😕 🫤 😟 🙁 ☹️ ☹ 😮 😯 😲 😳 🥺 🥹 😦 😧 😨 😰 😥 😢 😭 😱 😖 😣 😞 😓 😩 😫 🥱 😤 😡 😠 🤬 😈 👿 💀 ☠️ ☠ 💩 🤡 👹 👺 👻 👽 👾 🤖 😺 😸 😹 😻 😼 😽 🙀 😿 😾 🙈 🙉 🙊 💋 💌 💘 💝 💖 💗 💓 💞 💕 💟 ❣️ ❣ 💔 ❤️‍🔥 ❤‍🔥 ❤️‍🩹 ❤‍🩹 ❤️ ❤ 🧡 💛 💚 💙 💜 🤎 🖤 🤍 💯 💢 💥 💫 💦 💨 🕳️ 🕳 💣 💬 👁️‍🗨️ 👁‍🗨️ 👁️‍🗨 👁‍🗨 🗨️ 🗨 🗯️ 🗯 💭 💤

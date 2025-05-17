@@ -11,7 +11,7 @@ tags:
 date: 2022-07-14 13:15:25
 ---
 
-本篇是接 [上一篇文章](/2022/05/13/dotnet-core-build-standalone-executable-program/)，具体到 CSV 转 Excel 这一个场景下的实际应用。
+本篇是接 [上一篇文章](/dotnet-core-build-standalone-executable-program)，具体到 CSV 转 Excel 这一个场景下的实际应用。
 
 # 背景
 

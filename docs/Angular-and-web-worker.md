@@ -4,6 +4,13 @@ date: 2020-07-05 23:19:38
 tags: [angular, web worker, performance]
 ---
 
+<script setup>
+  import { ref } from 'vue';
+  import { BLOG_HOST } from './constants';
+  /** link of emoji search tool */
+  const emojiSearchTool = `${BLOG_HOST}/ng/#/lab/emoji`;
+</script>
+
 继前段时间瞎折腾 Angular 应用性能之后，页面性能确实有所提升，但感觉还有提升空间。想到此前一直缠绕在心中的 Web Worker，于是耐不住萌（ji）动（mo）的心，准备再接再厉，来一顿骚操作，让页面更加丝滑。
 
 ## 升级 Angular
@@ -41,7 +48,7 @@ ng update --all --force
 
 ## 跑起来，确保升级之后应用仍可以正常运行且编译（很重要！！！）
 
-一般情况下都是可以的正常运行的。真碰见问题，问 [Github](github.com/angular/angular/issues/) 或者搜索引擎。
+一般情况下都是可以的正常运行的。真碰见问题，问 [Github](https://github.com/angular/angular/issues/) 或者搜索引擎。
 
 好了，终于可以进入正题啦！
 
@@ -218,7 +225,7 @@ export class WorkerMessage {
 
 ## 拉出来遛一遛
 
-[<i class="mdui-icon material-icons">search</i> Emoji 搜索工具](/app/#/lab/emoji)
+[<i class="mdui-icon material-icons">search</i> Emoji 搜索工具]({{ emojiSearchTool }})
 
 emmmm，一切都按照预期走了，没什么问题。除了：Google Chrome 调试 Web Worker 真的是鸡肋！！！以后真的在项目中大量使用了再说吧。。。。。。
 

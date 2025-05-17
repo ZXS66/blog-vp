@@ -19,7 +19,7 @@ tags: [javascript, clipboard]
 
 *(仅看最重要的 [writeText](https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText) 的情况)*
 
-![`writeText` 的兼容性](/img/javascript-clipboard-API/writeText%20compatibility.PNG)
+![`writeText` 的兼容性](/img/javascript-clipboard-API/writeText%20compatibility.png)
 
 嗯，还行，82.33% 啦。如果不需要其他 API（readText、监听 ClipboardEvent 等），不考虑 IE 用户的话，足够了！
 

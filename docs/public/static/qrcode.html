@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generate QRCode</title>
+    <style>
+        html,
+        body,
+        #container {
+            margin: 0;
+            padding: 0;
+        }
+
+        input {
+            display: block;
+            width: 98vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="dataInput" placeholder="Type in data here and press enter key to proceed" autofocus>
+        <canvas id="result"></canvas>
+    </div>
+    <script src="qrcode.min.js"></script>
+    <script>
+        const dataInput = document.getElementById('dataInput');
+        const canvas = document.getElementById('result');
+
+        const querystrings = new URLSearchParams(window.location.search);
+        const data = querystrings.get('data');
+
+        if (data && data.length) {
+            // mode 1: passing data via query string
+            dataInput.remove();
+            QRCode.toCanvas(canvas, data, function (error) {
+                if (error) console.error(error);
+                console.log('generate QR code success!');
+            })
+        } else {
+            // mode 2: type in data in page
+            dataInput.addEventListener('keypress', function (ev) {
+                if (ev.which === 13) {
+                    const data = dataInput.value;
+                    if (data && data.length) {
+                        QRCode.toCanvas(canvas, data, function (error) {
+                            if (error) console.error(error);
+                            console.log('generate QR code success!');
+                        })
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

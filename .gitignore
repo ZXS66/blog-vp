@@ -153,3 +153,7 @@ yarn.lock
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# project files
+# credentials
+deploy.sh

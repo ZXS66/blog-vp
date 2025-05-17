@@ -1,5 +1,6 @@
 import { DefaultTheme, UserConfig, defineConfig } from 'vitepress';
 import FRONTMATTER_DATA from "./theme/get-frontmatter-data";
+import { BLOG_HOST } from '../constants';
 
 // frontmatter → sidebar
 const sidebar: DefaultTheme.SidebarItem[] = [];
@@ -26,23 +27,24 @@ const vitePressOptions: UserConfig<DefaultTheme.Config> = {
   cleanUrls: true,
   base: "/blog/",
   markdown: { image: { lazyLoading: true } },
+  srcExclude: ["deleted/*.md"],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/favicon.ico",
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'App', link: 'https://johnzhu.online/ng' }
+      { text: 'App', link: `${BLOG_HOST}/ng` }
     ],
     search: { provider: "local" },
     sidebar: sidebar || [
       { text: "首页", link: "/" },
-      { text: "App", link: "https://johnzhu.online/ng" },
-      { text: "关于我", link: "https://johnzhu.online/ng#/resume/2025" },
+      { text: "App", link: `${BLOG_HOST}/ng` },
+      { text: "关于我", link: `${BLOG_HOST}/ng#/resume/2025` },
     ],
     socialLinks: [
       // https://simpleicons.org/
       { icon: 'github', link: 'https://github.com/ZXS66' },
-      { icon: 'wechat', link: 'https://johnzhu.online/blog/static/qrcode.html?data=https://u.wechat.com/ENx87m7_oPP-mj2Ur-ffHIY' },
+      { icon: 'wechat', link: `${BLOG_HOST}/blog/static/qrcode.html?data=https://u.wechat.com/ENx87m7_oPP-mj2Ur-ffHIY` },
       // { icon: "mailbox.org", link: "mailto:zh_cn2008@hotmail.com" }
     ],
     footer: {

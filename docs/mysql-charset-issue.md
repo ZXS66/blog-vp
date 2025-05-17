@@ -34,7 +34,7 @@ mysqlconn.connect(user=user,password=password,database=database,charset='utf8',c
 至于第三点，一般情况下，都不是问题，因为现代编程语言，基本默认都是存成 `utf8` 了。但是，当你卡壳了，记住，这一点也很重要！举个🌰：
 
 在 MySQL Workbench 查询窗口中，我是用 `ASCII` 字符拼接，是可以正常返回的：
-![sql query with normal characters concat statement](/img/mysql-character-set-issue/working-concat-sql.JPG)
+![sql query with normal characters concat statement](/img/mysql-character-set-issue/working-concat-sql.jpg)
 但当我尝试使用 `Emoji` 字符拼接时，它就不行了：
 ![sql query with emoji characters concat statement](/img/mysql-character-set-issue/not-working-concat-sql.png)
 

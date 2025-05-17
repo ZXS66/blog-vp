@@ -6,7 +6,7 @@ tags:
 date: 2021-11-10 18:25:13
 ---
 
-SQL Server 没有 [GROUP_CONCAT](/2021/02/28/GROUP-CONCAT-in-SQL-Server/)，MySQL 没有 [STRING_SPLIT](https://docs.microsoft.com/en-us/sql/t-sql/functions/string-split-transact-sql?view=sql-server-ver15)。 😔
+SQL Server 没有 [GROUP_CONCAT](/GROUP-CONCAT-in-SQL-Server)，MySQL 没有 [STRING_SPLIT](https://docs.microsoft.com/en-us/sql/t-sql/functions/string-split-transact-sql?view=sql-server-ver15)。 😔
 
 还能咋办，人肉填坑啊！
 

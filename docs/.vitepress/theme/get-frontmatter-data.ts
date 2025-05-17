@@ -1,6 +1,6 @@
 // reference: https://yingjiezhao.com/zh/articles/vitepress-sidebar-auto-generation/
 
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
 
 import matter from "gray-matter";
@@ -26,7 +26,7 @@ const FRONTMATTER_DATA: PostMeta[] = [];
 for (const file of files) {
     if (!(['.MD', '.md'].includes(path.extname(file)))) {
         // 跳过非文章页面 (markdown格式)
-        console.warn(`❌ ${file} omitted`);
+        // console.warn(`❌ ${file} omitted`);
         continue;
     }
     const content = await readFile(path.resolve("./docs/", file), 'utf-8');
@@ -34,7 +34,7 @@ for (const file of files) {
     const meta = grayMatter.data;
     // https://vitepress.dev/reference/frontmatter-config#sidebar
     if ('sidebar' in meta && !meta.sidebar) {
-        console.warn(`❌ ${file} omitted`);
+        // console.warn(`❌ ${file} omitted`);
         continue;
     }
     const pMeta: PostMeta = {

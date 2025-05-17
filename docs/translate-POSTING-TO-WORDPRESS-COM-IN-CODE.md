@@ -45,7 +45,7 @@ tags: [translate, c#, wordpress, blog, 随笔]
 
 WordPress 是一个非常通用的博客平台，让我们接受它。我完全不奇怪它有一个 REST API 允许你去发表文章（我之前使用 StackEdit 多年的事实就是一个很好的证明）。我也不奇怪它使用 OAuth2 来认证，判定 OAuth 的异常。
 
-我好奇的是，我不能找到任何 .NET 包来写一个控制台应用程序来调用仅包含极简代码的 API。我甚至不能找到任何简单的适用于控制台应用程序而非 web 应用程序的 OAuth 库。 [RestSharp](https://restsharp.dev/) 看起来像他承诺的那样，就像他的首页所说：“支持 Basic, OAuth 1, OAuth 2, JWT, NTLM”，但是 [这篇认证文档](https://restsharp.dev/usage/authenticators.html) 仅能够做有限的事情。看他们的源码，它除了启动一个本地的 web 服务器以接收 OAuth 代码，然后用于交换完整的认证令牌之外，并未做任何其它的事情（我知道并不多的 OAuth 2，但是足够我在查看一些库源码的时候明白缺少了什么）。[WordPressPCL](看起来)也像他承诺的那样，但是依赖 JWT 认证插件，我不想仅仅是为了安装一个简单的插件从 wordpress.com 个人账户升级商业账户（我知道它可能还有其他的好处，但……）。
+我好奇的是，我不能找到任何 .NET 包来写一个控制台应用程序来调用仅包含极简代码的 API。我甚至不能找到任何简单的适用于控制台应用程序而非 web 应用程序的 OAuth 库。 [RestSharp](https://restsharp.dev/) 看起来像他承诺的那样，就像他的首页所说：“支持 Basic, OAuth 1, OAuth 2, JWT, NTLM”，但是 [这篇认证文档](https://restsharp.dev/usage/authenticators.html) 仅能够做有限的事情。看他们的源码，它除了启动一个本地的 web 服务器以接收 OAuth 代码，然后用于交换完整的认证令牌之外，并未做任何其它的事情（我知道并不多的 OAuth 2，但是足够我在查看一些库源码的时候明白缺少了什么）。[WordPressPCL](https://github.com/wp-net/WordPressPCL) 看起来也像他承诺的那样，但是依赖 JWT 认证插件，我不想仅仅是为了安装一个简单的插件从 wordpress.com 个人账户升级商业账户（我知道它可能还有其他的好处，但……）。
 
 因此，我有如下选项：
 

@@ -23,7 +23,7 @@ Unicode 码： [u30ede](https://glyphwiki.org/wiki/u30ede) （繁体，日常使
 ### 扩展
 
 1. 得益于网络的发达（媒体的炒作），还有很多臆造字其实是真的不能正常输入和显示的，比如招财进宝合体字。
-   *2021/2/6更新：[如何网页显示臆造字](/2021/02/06/zhaocaijinbao)*
+   *2021/2/6更新：[如何网页显示臆造字](/zhaocaijinbao)*
 
 2. 还有更多的的繁体字/生僻字，有的比<img src="/img/biang/u30ede@5.svg" style="max-width:1em;display:inline"/>（biáng） 字还复杂，但是已被 Unicode 收录，所以可以正常输入和显示，比如龘（dá）。
 

@@ -16,13 +16,13 @@ Web Speech API 还是比较新的功能，兼容性并没有那么好。最新�
 
 emmm，我还是太年轻了，看着这个功能的支持情况，我觉得，还是过几年再看吧。
 
-![Speech Recognition API](/img/javascript-web-speech-api/Speech-Recognition-API.20200713.PNG)
+![Speech Recognition API](/img/javascript-web-speech-api/Speech-Recognition-API.20200713.png)
 
 ## Speech Synthesis API
 
 Speech Synthesis API 虽然实用性没前者大，但是也是值得一玩的。
 
-![Speech Synthesis API](/img/javascript-web-speech-api/Speech-Synthesis-API.20200713.PNG)
+![Speech Synthesis API](/img/javascript-web-speech-api/Speech-Synthesis-API.20200713.png)
 
 (Coming soon...)
 

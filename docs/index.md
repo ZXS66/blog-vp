@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "ZXS's blog"
   text: ""
-  tagline: My great project tagline
+  tagline: ""
   actions:
     - theme: brand
       text: App
