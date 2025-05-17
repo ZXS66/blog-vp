@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 150 150" width="150" height="150">
+<style>text{font-family:华文楷体,sans-serif;font-size:50px}.fat{transform:scaleX(2)}.thin{transform:scaleX(0.33333);transform-origin:center}.bold{font-weight:bolder}.mian{font-size:65px}.wang,.gang{font-size:20px;}.chuo{font-size:80px;font-weight:lighter}</style>
+<text x="42" y="77" class="mian">宀</text>
+<text x="55" y="80" class="wang bold">𤣩</text>
+<text x="72" y="80" class="gang bold">缶</text>
+<text x="5" y="120" class="zhui thin bold">隹</text>
+<text x="40" y="120" class="bei thin bold">貝</text>
+<text x="70" y="120" class="bei thin bold">扌</text>
+<text x="100" y="120" class="bei thin bold">召</text>
+<text x="23" y="130" class="chuo gaint">辶</text>
+</svg>
