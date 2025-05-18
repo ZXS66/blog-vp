@@ -10,7 +10,7 @@ date: 2022-02-03 23:28:57
 
 最近公司有使用 `elasticsearch` 的需求，正好借此机会，复习一下之前的知识。
 
-### 下载 elasticsearch 和 Kibana
+## 下载 elasticsearch 和 Kibana
 
 [elasticsearch](https://www.elastic.co) 这几年的变化，还是挺大的，特别是从 [更改 license](https://www.elastic.co/blog/license-change-clarification) 之后，变得更加强大了。
 
@@ -20,7 +20,7 @@ date: 2022-02-03 23:28:57
 
 因为我这边的日常工作基本上都是在 `Windows` 中进行，所以 [直接下载 zip 包](https://www.elastic.co/elastic-stack) 即可。当前我下载的版本是 `7.16.3` （`elasticsearch` 和 `Kibana` 版本一般需要统一，具体可以参考 [这个文档](https://www.elastic.co/support/matrix#matrix_compatibility)）。
 
-### 安装和配置
+## 安装和配置
 
 1. 解压下载好的两个 zip 包
 2. 更改 `elasticsearch-7.16.3/config/elasticsearch.yml` 配置如下(可根据实际情况做调整)：
@@ -50,7 +50,7 @@ date: 2022-02-03 23:28:57
 7. 打开浏览器，输入网址 [http://192.168.0.8:5601](http://192.168.0.8:5601) 检查一下 Kibana 是否正常运行。（需要提供上上一步设置的用户名密码）
   ![install successfully](/img/get-started-with-elasticsearch/install-successfully.jpg)
 
-### 使用
+## 使用
 
 `elastic` 官方已经给出了很多使用案例，包括日志分析、机器学习（需要付费解锁😄）、网络安全监测等等。这里就不深入了，仅介绍入门使用：使用 `elasticsearch` 的来增强关系型数据库的全文搜索能力。
 
@@ -59,7 +59,7 @@ date: 2022-02-03 23:28:57
 
 
 
-### 参考链接
+## 参考链接
 
 - [Get started with Elasticsearch, Kibana and the Elastic Stack](https://www.elastic.co/start)
 - [Set up minimal security for Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html)

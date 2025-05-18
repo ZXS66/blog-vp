@@ -54,7 +54,7 @@ GO
 
 更多请参考：[ZXS66/mssql_clr_util](https://github.com/ZXS66/mssql_clr_util)
 
-### 参考链接
+## 参考链接
 
 - [How to make a query with group_concat in sql server](https://stackoverflow.com/questions/17591490/how-to-make-a-query-with-group-concat-in-sql-server)
 - [USE STUFF AND ‘FOR XML PATH’ IN SQL SERVER TO CONCATENATE STRING](https://codemegeek.com/2018/11/17/use-stuff-and-for-xml-path-in-sql-server-to-concatenate-string/)

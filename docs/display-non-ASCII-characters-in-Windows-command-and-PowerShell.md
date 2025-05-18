@@ -50,7 +50,7 @@ emmm… 还是不行… 😢
 
 ![Windows Terminal chcp 65001 能行？](/img/display-non-ASCII-characters-in-Windows-command-and-PowerShell/windows-terminal-with-chcp-65001.png)
 
-### 参考链接
+## 参考链接
 
 - [Windows Command-Line: Backgrounder](https://devblogs.microsoft.com/commandline/windows-command-line-backgrounder/)
 - [Using non-ASCII characters in a cmd batch file](https://stackoverflow.com/questions/18813495/using-non-ascii-characters-in-a-cmd-batch-file)

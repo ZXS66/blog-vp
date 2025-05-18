@@ -18,11 +18,11 @@ tags: [javascript, promise, fetch, xmlhttprequest, rxjs, abort, cancel]
 
 [Stackoverflow](https://stackoverflow.com/questions/30233302/promise-is-it-possible-to-force-cancel-a-promise) 上有一个问答已经很好的回答了大部分用户的疑惑了。简单来说，① 是的，Promise 不支持取消功能 ② 但你可以使用第三方类库比如 [bluebird](https://github.com/petkaantonov/bluebird) ③ 手动传入取消 token ④ 利用 [Promise.race](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) 方法
 
-##### 第三方类库
+### 第三方类库
 
 emmm，我就是想要取消一个 Promise 任务（停止执行 then 方法），为什么要我引入第三方库，而且还要对以前的代码大改？！anyway，第三方存在即合理，我就不去纠结引入第三方库的利弊了。各位如果感兴趣，请移步至其官网或各大搜索引擎。
 
-##### 手动传入取消 token
+### 手动传入取消 token
 
 这个稍微有点复杂，就是自己处理取消逻辑。拿 XMLHttpRequest 举例：
 
@@ -74,7 +74,7 @@ var [req2, cancel2] = getWithCancel("/someUrl");
 cancel2();
 ```
 
-##### 利用 Promise.race 方法
+### 利用 Promise.race 方法
 
 没用过这个方法的，可以参考 MDN 上的 [这个范例](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race) 快速上手。
 
@@ -119,7 +119,7 @@ setTimeout(cancel,512,'cancelled');
 
 其实是上一种方法的变种，需要手动传入取消 token。有一个小限制就是，如果在运行 `testcase` 之前，已经订阅了 `myTask`（调用 .then 方法），那其实在取消（调用 `cancel` 方法）之后，该订阅者还是会被通知的。所以，应该订阅 `testcase` 而非 `myTask`。
 
-##### 改写 `Promise.prototype.cancel`  ❌不推荐
+### 改写 `Promise.prototype.cancel`  ❌不推荐
 
 其实还有一个更简单又很好用的办法，就是直接更改 `Promise` 原型，添加 `Promise.prototype.cancel` 方法，这样以前代码也不用变，还附赠了 `cancel` 方法。但是个人不推荐，因为，是侵入性的，太粗鲁了。不过我相信萝卜白菜，各有所爱，总有人好这一口。既然这样，大家自行实现去吧。 😄
 

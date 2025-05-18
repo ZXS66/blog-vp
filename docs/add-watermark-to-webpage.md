@@ -92,7 +92,7 @@ stylesheet.cssRules[0].style.backgroundImage=dataUri; // need to update accordin
 }
 ```
 
-### 参考链接
+## 参考链接
 
 - [How to add SVGs with CSS (background-image)](https://www.svgbackgrounds.com/how-to-add-svgs-with-css-background-image/)
 - [CSSStyleSheet.replaceSync()](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet/replaceSync) 

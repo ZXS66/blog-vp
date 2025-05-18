@@ -14,11 +14,11 @@ date: 2021-06-06 10:24:00
 
 我目前使用了两种方法：
 
-### 使用 Microsoft SQL Server Migration Assistant for MySQL 工具
+## 使用 Microsoft SQL Server Migration Assistant for MySQL 工具
 
 这是微软官方出品的迁移工具。对于项目前期业务人员进行原型快速验证非常有帮助。
 
-##### 使用步骤
+### 使用步骤
 
 1. 下载 [Microsoft SQL Server Migration Assistant for MySQL](https://www.microsoft.com/en-us/download/details.aspx?id=54257) ；
 2. 双击 exe 文件安装；
@@ -37,16 +37,16 @@ SSMA 网上有很多图文/视频教程，各位可以自行搜索。期间可�
 - MySQL ODBC Driver 缺失问题，可以自行去 [MySQL 官网下载](https://www.mysql.com/products/connector/)；如果还是有问题，可以去 SSMA 下载页找它的 System Requirements，里面会提到具体的 MySQL ODBC Driver 版本号，下载这一特定版本号就对了。
 - Visual Studio 2019 x64 Redistributable 组件缺失问题，去 [微软官方下载](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0) 安装即可。
 
-##### 优点
+### 优点
 1. 非 IT 人士也可以上手，不用编写任何代码；
 
-##### 缺点
+### 缺点
 1. 前期环境安装和配置步骤繁琐，容易出错；
 2. 无法自动化。
 
-### 创建 SSIS
+## 创建 SSIS
 
-##### 使用步骤
+### 使用步骤
 
 [官方参考文档](https://docs.microsoft.com/en-us/sql/integration-services/lesson-1-create-a-project-and-basic-package-with-ssis?view=sql-server-ver15)
 
@@ -78,17 +78,17 @@ SSMA 网上有很多图文/视频教程，各位可以自行搜索。期间可�
 -- approach 3: CAST(`list_date` AS DATE) AS `EY_List_date`,  -- for date type
 ```
 
-##### 优势：
+### 优势：
 1. 性能快；
 2. 人工介入少，不易出错；
 3. 可自动化，SQL Server 中可以直接查看每次运行的报告。
 
-##### 缺点：
+### 缺点：
 1. SSIS 任务**只能使用 Windows 认证**。前期环境配置需要花费一定时间；
 2. 开发 SSIS 时，部分提示信息不够准确清晰；
 3. 第一次需要手动同步 Schema，以后每次 Schema 有变动，SSIS package 也需要跟着变动。
 
-### 参考链接：
+## 参考链接：
 
 - [Download Microsoft SQL Server Migration Assistant for MySQL](https://www.microsoft.com/en-us/download/details.aspx?id=54257)
 - [MySQL :: Download Connector/ODBC](https://dev.mysql.com/downloads/connector/odbc/)

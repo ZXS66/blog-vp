@@ -17,11 +17,11 @@ date: 2022-01-30 08:00:59
 
 和低代码相关的其他名词/产品有：
 
-### Tableau 和 Power BI
+## Tableau 和 Power BI
 
 以前，大公司都会请专门的人才（数据分析师/数据科学家等），使用 `Tableau` / `Power BI` 来做各种报表，分析市场数据/订单数据等，俗称 `BI` (`Business Intelligence`，业务智能)。
 
-### iOS 快捷指令(Shortcuts)
+## iOS 快捷指令(Shortcuts)
 
 `iOS Shortcuts`(快捷指令)，它不是第一个移动端编程 APP，但绝对是最出名的。可以说，它让全民编程时代来的更凶猛。
 
@@ -31,7 +31,7 @@ date: 2022-01-30 08:00:59
 
 ![智慧生活](https://appimg.dbankcdn.com/application/icon144/65/59a1f04d8b714e3cb7b7bad37783d714.png)
 
-### 机器人流程自动化(RPA, Robotic Process Automation)
+## 机器人流程自动化(RPA, Robotic Process Automation)
 
 - [UI Path](https://images.ctfassets.net/5965pury2lcm/5emz38G3Bw126GqB1ss9Y6/6a32ae5f4c8dde876512f058356c5776/logo-lockup-Apps.png)
 - ![Power Automate](https://powerautomate.microsoft.com/images/application-logos/svg/powerautomate.svg)
@@ -39,15 +39,15 @@ date: 2022-01-30 08:00:59
 - [影刀](https://www.winrobot360.com/img/logo.svg)
 - [实在 RPA](https://cdn-static-resources.ai-indeed.com/official-website/images/pc/header/logo.png)
 
-### 聊天机器人(Chatbots)
+## 聊天机器人(Chatbots)
 
 一般用于售后服务、知识库查阅等服务中心。（一般会于自然语言处理(`NLP`，`Natural Language Processing`) 和人工智能(`AI`,`Artificial Intelligence`)联系在一起）
 
-### Scriptable
+## Scriptable
 
 > Scriptable, an app that lets you automate iOS using JavaScript.
 
-### 参考链接
+## 参考链接
 
 - [What is Robotic Process Automation (RPA) | IBM](https://www.ibm.com/cloud/learn/rpa)
 - [Shortcuts on the App Store](https://apps.apple.com/us/app/shortcuts/id915249334)

@@ -12,7 +12,7 @@ date: 2021-03-14 10:24:00
 
 先不说这个标准是谁定的，脑子瓦塌了？你真的放心让我来接触域账户密码(明文)？！我自己都害怕。。。不担心我私自存储用户密码？不担心用户填写信息时候被窃听？至少你使用 `SSO` （Single-Sign On，单点登录）都比这个强啊！
 
-### 更改 web.config
+## 更改 web.config
 
 打开目标站点的 `web.config` 文件，更新 `authentication` 和 `authorization` 节点配置如下：
 
@@ -29,11 +29,11 @@ date: 2021-03-14 10:24:00
 </system.web>
 ```
 
-### 更改 IIS 配置
+## 更改 IIS 配置
 
 运行 `inetmgr` 命令，进入 IIS，选中需要更改的目标站点，点击认证（Authentication），启用匿名认证（Anonymous Authentication）和表单认证（Forms Authentication）,禁用其他认证方式（如 Windows 认证、Basic 认证等等）。
 
-### 更新相关代码
+## 更新相关代码
 
 新建/打开 `Views/Home/Login.cshtml` 文件，更新代码如下：
 
@@ -251,14 +251,14 @@ date: 2021-03-14 10:24:00
     }
 ```
 
-### 备注
+## 备注
 
 1. 应整改要求，Cookie Path 没有特殊批复，不得设置为根路径(`/`)，故此处的 Cookie Path 设置为 `/v3` (所有页面放置于 `/v3/app` 目录下，API 在 `/v3/api` 路径下)；
 2. 默认开启 Secure 和 HttpOnly 属性，防止 CSRF；
 3. 此处示例代码，表面上启用表单验证，其实后台服务器将用户填写的表单发送至服务器的域服务器（AD Server）验证。各位看官可以根据自身实际情况调整；
 4. 待调整事项：此处 `Login.cshtml` 使用了内联脚本。但如果公司启用了严格 CSP，该内联脚本将会被禁用，可考虑移至外部脚本中。
 
-### 参考链接
+## 参考链接
 
 - [Implement forms-based authentication in an ASP.NET application by using C#.NET](https://docs.microsoft.com/en-us/troubleshoot/aspnet/forms-based-authentication)
 - [Forms Authentication In ASP.NET](https://www.c-sharpcorner.com/UploadFile/fa9d0d/forms-authentication-in-Asp-Net/)

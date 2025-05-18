@@ -22,7 +22,7 @@ tags: [node, package.json]
 
 ---------------------------
 
-##### Package versions
+### Package versions
 
 You have seen in the description above version numbers like these: `~3.0.0` or `^0.13.0`. What do they mean, and which other version specifiers can you use?
 
@@ -51,7 +51,7 @@ and you can combine most of the above in ranges, like this: `1.0.0 || >=1.1.0 <1
 
 ---------------------------
 
-##### Package versions
+### Package versions
 
 你可以在上面描述中看到类似于 `~3.0.0` 或 `^0.13.0` 这样的版本编号。它们是什么意思，我们又如何抉择？
 

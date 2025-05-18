@@ -20,6 +20,6 @@ date: 2021-05-16 17:30:56
 
 4. 更多可参考本博客每篇文章右下角的分享/微信分享。
 
-### 参考链接
+## 参考链接
 
 - [qrcode - npm](https://www.npmjs.com/package/qrcode)

@@ -1,15 +1,12 @@
 ---
 title: Angular × web worker
 date: 2020-07-05 23:19:38
+head:
+  - - meta
+    - name: keywords
+      content: angular web worker performance
 tags: [angular, web worker, performance]
 ---
-
-<script setup>
-  import { ref } from 'vue';
-  import { BLOG_HOST } from './constants';
-  /** link of emoji search tool */
-  const emojiSearchTool = `${BLOG_HOST}/ng/#/lab/emoji`;
-</script>
 
 继前段时间瞎折腾 Angular 应用性能之后，页面性能确实有所提升，但感觉还有提升空间。想到此前一直缠绕在心中的 Web Worker，于是耐不住萌（ji）动（mo）的心，准备再接再厉，来一顿骚操作，让页面更加丝滑。
 
@@ -68,7 +65,7 @@ ng generate webWorker [name]
 
 一般情况下，web worker 是需要操作请求服务器数据的，所以这里简单贴一下请求代码
 
-##### `xxxx.worker.ts` 文件：
+### `xxxx.worker.ts` 文件：
 
 ``` TypeScript
 /// <reference lib="webworker" />
@@ -159,7 +156,7 @@ const fetchCheckpointTagMap = async () => {
 
 ```
 
-##### `worker-common.model.ts` 文件
+### `worker-common.model.ts` 文件
 
 ``` TypeScript
 
@@ -225,7 +222,8 @@ export class WorkerMessage {
 
 ## 拉出来遛一遛
 
-[<i class="mdui-icon material-icons">search</i> Emoji 搜索工具]({{ emojiSearchTool }})
+<script setup>const myAppLink=`${window.location.origin}/ng`;</script>
+<a :href="myAppLink" target="_blank"><i class="mdui-icon material-icons">search</i> Emoji 搜索工具</a>
 
 emmmm，一切都按照预期走了，没什么问题。除了：Google Chrome 调试 Web Worker 真的是鸡肋！！！以后真的在项目中大量使用了再说吧。。。。。。
 

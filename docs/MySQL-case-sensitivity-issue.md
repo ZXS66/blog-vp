@@ -7,6 +7,8 @@ tags:
 date: 2022-02-10 22:25:28
 ---
 
+## 正文
+
 先说结论，一个对于像我这样的 `MySQL` 小菜狗们来说可能不清楚的知识点：同样的 `SQL` 脚本，如果不注意大小规范，在某些系统上可以正常运行，而扔到另一个系统上可能就会报错。
 
 举个🌰：
@@ -94,7 +96,7 @@ OPTIONS (USER 'Remote',PASSWORD '', HOST 'XXX.XXX.XXX.XXX', DATABASE 'test');
 
 有一个办法，虽然肯定不是最佳实践，但应该能解决问题（我没试过 😂）：用一个能够区分数据库/表名称大小写的 `MySQL` 实例中转，然后在这个实例中名称能小写的都小写。然后再对这个中转实例创建 `FEDERATED` 表格。
 
-### 参考链接
+## 参考链接
 
 - [MySQL::Identifier Case Sensitivity](https://dev.mysql.com/doc/refman/8.0/en/identifier-case-sensitivity.html)
 - [MySQL::Server System Variables](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names)

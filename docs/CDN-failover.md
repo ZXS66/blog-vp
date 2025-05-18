@@ -41,7 +41,7 @@ tags: [cdn, javascript, failover, async, defer, execution order]
 
 ## 调整 Hexo 模板生成脚本
 
-##### 增加 CDN 配置项
+### 增加 CDN 配置项
 
 👇 _config.yaml
 
@@ -49,7 +49,7 @@ tags: [cdn, javascript, failover, async, defer, execution order]
 cdn: https://cdn.bootcdn.net/ajax/libs/
 ```
 
-##### 使用 [Hexo 默认的 helper 方法](https://hexo.io/docs/helpers.html) js/css 生成 script/link 标签。
+### 使用 [Hexo 默认的 helper 方法](https://hexo.io/docs/helpers.html) js/css 生成 script/link 标签。
 
 👇 after-footer.ejs
 
@@ -62,7 +62,7 @@ cdn: https://cdn.bootcdn.net/ajax/libs/
 <%- js({src:'js/script',defer:true}) %>
 ```
 
-##### 编写自定义 Hexo Helper 方法 (*Optional*)
+### 编写自定义 Hexo Helper 方法 (*Optional*)
 
 Hexo 默认的 helper 方法 `js` 和 `css` 足够使用，但是还有精简的空间。比如每个方法的参数均包含 `config.cdn` 和 `crossorigin:'anonymous'`，一个程序员的基本素养就是 DRY (Don't Repeat Yourself)。以下就是其中一种优化措施 （[参考链接](https://hexo.io/api/helper.html)）：
 
@@ -159,7 +159,6 @@ hexo.extend.helper.register("js_cdn", function(item) {
     /// your business code comes here
   }
 })();
-
 ```
 
 其中有一行语句需要单独拎出来讲一下的，就是上面脚本的第 31 行，`script.async = false;`

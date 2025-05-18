@@ -13,17 +13,17 @@ date: 2021-01-15 11:04:45
 
 目前，我就遇到了需要离线安装 Visual Studio，并且离线安装 NuGet Package 的场景。
 
-### 离线安装 Visual Studio
+## 离线安装 Visual Studio
 
 微软很“贴心”的给出了离线安装的指引[<fa-link/>](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019)：
 
 简单来说，有两种方式，图形化（GUI）或者命令行（Command Line)：
 
-##### 图形化下载安装方式
+### 图形化下载安装方式
 
 这种方式适用于可联网的主机，在下载完成后，再断开连接完成安装。不过多展开了。
 
-##### 命令行下载安装
+### 命令行下载安装
 
 这种方式虽然复杂一点，但是灵活，适用于在可联网的主机A下载，然后打包至主机B上安装。
 
@@ -59,18 +59,18 @@ date: 2021-01-15 11:04:45
 
    接下来有安装界面了，鼠标点点就搞得定。
    
-### 离线安装 NuGet Package
+## 离线安装 NuGet Package
 
 在某些情形下，我们需要离线使用 Visual Studio，这个时候，我们就需要实现下载好 NuGet 包，然后上传到指定文件夹中。
 
-##### 下载 NuGet 包
+## 下载 NuGet 包
 
 可以选择上 [NuGet 官网](https://www.nuget.org/) 搜索对应的包名然后点击 “Download package” 下载，或者使用 [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)。
 
-##### 指定 NuGet Package Manager 本地安装库 [<fa-link/>](https://social.technet.microsoft.com/wiki/contents/articles/25127.nuget-offline-package.aspx)
+## 指定 NuGet Package Manager 本地安装库 [<fa-link/>](https://social.technet.microsoft.com/wiki/contents/articles/25127.nuget-offline-package.aspx)
 
 打开菜单：Tools --> NuGet Package Manager --> Package Manager Settings，点击 Package Source Tab，点击 + 图标，选择离线安装包所在目录，点击 OK。
 
-##### 参考链接
+## 参考链接
 
 - [Creating a local NuGet repository for offline development](https://www.codurance.com/publications/2015/05/04/creating-a-local-nuget-repository)

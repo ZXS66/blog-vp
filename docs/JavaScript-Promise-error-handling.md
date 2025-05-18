@@ -20,7 +20,7 @@ date: 2021-06-19 17:34:03
 
 但 `Promise` 也可以使用 [Promise.prototype.finally](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) 或者使用 JS 原生的 `try...catch` 语句达到抛出异常的目的。
 
-### 最佳实践 
+## 最佳实践 
 
 根据 [MDN](https://developer.mozilla.org) 的文章 [<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#common_mistakes) 推荐，一般 `Promise` 链的最佳实践满足以下三个条件：
 
@@ -68,13 +68,13 @@ doSomething()
 - 当然，如果发生了无法预料到的异常，那我们也可以不使用 [Promise.prototype.catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
 - 任何情况下，我们都应该监听 `unhandledrejection` 事件，跟踪未捕获的异常并通知给用户（也可能是我们的服务器），这样的话我们的应用才不会“死”。
 
-### 不同点
+## 不同点
 
 1. `reject` 只能用在 `Promise` 回调函数里，而抛出 (`throw`) 异常则可以使用在任何 `try...catch` 语句或者 `Promise` 中；
 2. `reject` 异常之后，方法内的函数会继续执行，而抛出 (`throw`) 异常则会立刻终止执行；
 3. `reject` 可以用在 `Promise` 的同步/异步回调函数里，而抛出 (`throw`) 异常只能用在同步回调函数里。
 
-### 参考链接
+## 参考链接
 
 - [Error handling with promises](https://javascript.info/promise-error-handling)
 - [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)

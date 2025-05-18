@@ -12,13 +12,13 @@ date: 2021-10-16 22:15:25
 
 然后，我们得了解，一个 `Emoji` 是如何在一台设备（主机、网页、手机、平板、便携设备等）上显示出来的。这其中会牵扯到很多因素，包括但不限于：码点（[Code Points](https://en.wikipedia.org/wiki/Code_point)）、字符集（[Character Set](https://en.wikipedia.org/wiki/Character_set)）、字体（[Font](https://www.dictionary.com/browse/font)）、`Unicode` 编码（[Unicode Encoding](https://techterms.com/definition/unicode)）、零宽度连接字符序列（[Emoji ZWJ Sequence](https://emojipedia.org/emoji-zwj-sequence/)，Emoji Zero Width Joiner Sequence） 等。
 
-### 码点
+## 码点
 
 每个字符（`ASCII`、中文、阿拉伯文等）在 `Unicode` 表中都会有一个坑，也就是码点（十六进制）。比如空格排 32，相应的码点是 `U+0020`；`a` 排 97，码点是 `U+0061`。相应的，`Emoji` 被收录到 `Unicode` 之后，也会给每个 `Emoji` 分配一个坑（码点）。
 
 比如，`😀` 的码点就是 `U+1F600`。
 
-### 字符集
+## 字符集
 
 细心的同学可能发现了，Windows 系统自带了一个小工具，字符集（Character Map）。
 
@@ -26,7 +26,7 @@ date: 2021-10-16 22:15:25
 
 打开这个软件，大家就会发现，其实一个字符集定义了每个坑到底该存什么。
 
-### 字体
+## 字体
 
 字符集再往上就是字体了。一个字体里包含至少一套字符集。还是打开 Characte Map 这个软件，你会发现，同一个字符集中，即使是同一个码点，切换不同字体，它可能长得会不太一样。这就是字体的作用。字体其实定义了每个码点的字符到底该长什么样。计算机只有拿到字体了，它才能正常渲染字符，否则（未安装字体/该字体中未定义该字符对应的码点）该字符就会被异常显示，俗称乱码。
 
@@ -35,11 +35,11 @@ date: 2021-10-16 22:15:25
 1. 前端中有个概念叫 **图标字体**（Icon Font），就是自定义了字符展示方式。
 2. 同一个 `Emoji` 在不同平台（Windows/Android/iOS等）、不同软件（Chrome、输入法、微信等）、不同版本都不一样，很可能是背后所支持的字体不一样。
 
-### Unicode 编码
+## Unicode 编码
 
 关于 `Unicode`，网上资料数不胜数，此处就不赘述了。
 
-### 零宽度连接字符序列
+## 零宽度连接字符序列
 
 `Emoji` 其实就是 `Unicode` 中特定的码点。特别的，有这么一些 `Emoji`，是由一些简单的 `Emoji` 组合而来。比如 👩‍❤️‍👩，其实是由两个 👩 和一个 ❤️ 组合而来：
 
@@ -47,17 +47,12 @@ date: 2021-10-16 22:15:25
 
 而 `Emoji` 组合的时候，就会用到一些特殊的连接字符。如果设备支持的 `Unicode` 不是最新的，那就可能不会正常显示，一个 `Emoji` 会展示成为两个。
 
-### Emoji 搜索
+## Emoji 搜索
 
-<script setup>
-import { ref } from 'vue';
-import { BLOG_HOST } from "./constants";
-  const emojiSearchTool = `${BLOG_HOST}/ng/#/lab/emoji`;
-</script>
+<script setup>const myAppLink=`${window.location.origin}/ng`;</script>
+<a :href="myAppLink" target="_blank"><i class="mdui-icon material-icons">search</i> Emoji 搜索工具</a>
 
-[<i class="mdui-icon material-icons">search</i> Emoji 搜索工具]({{ emojiSearchTool }})
-
-### Emoji 清单
+## Emoji 清单
 
 我已整理当前完整的 `Emoji` 清单(v14.0)，请 [点击这里](/img/emoji-knowledge-review/full-emoji-list.json) 查收。
 
@@ -82,7 +77,7 @@ import { BLOG_HOST } from "./constants";
 - Flags
   🏁 🚩 🎌 🏴 🏳️ 🏳 🏳️‍🌈 🏳‍🌈 🏳️‍⚧️ 🏳‍⚧️ 🏳️‍⚧ 🏳‍⚧ 🏴‍☠️ 🏴‍☠ 🇦🇨 🇦🇩 🇦🇪 🇦🇫 🇦🇬 🇦🇮 🇦🇱 🇦🇲 🇦🇴 🇦🇶 🇦🇷 🇦🇸 🇦🇹 🇦🇺 🇦🇼 🇦🇽 🇦🇿 🇧🇦 🇧🇧 🇧🇩 🇧🇪 🇧🇫 🇧🇬 🇧🇭 🇧🇮 🇧🇯 🇧🇱 🇧🇲 🇧🇳 🇧🇴 🇧🇶 🇧🇷 🇧🇸 🇧🇹 🇧🇻 🇧🇼 🇧🇾 🇧🇿 🇨🇦 🇨🇨 🇨🇩 🇨🇫 🇨🇬 🇨🇭 🇨🇮 🇨🇰 🇨🇱 🇨🇲 🇨🇳 🇨🇴 🇨🇵 🇨🇷 🇨🇺 🇨🇻 🇨🇼 🇨🇽 🇨🇾 🇨🇿 🇩🇪 🇩🇬 🇩🇯 🇩🇰 🇩🇲 🇩🇴 🇩🇿 🇪🇦 🇪🇨 🇪🇪 🇪🇬 🇪🇭 🇪🇷 🇪🇸 🇪🇹 🇪🇺 🇫🇮 🇫🇯 🇫🇰 🇫🇲 🇫🇴 🇫🇷 🇬🇦 🇬🇧 🇬🇩 🇬🇪 🇬🇫 🇬🇬 🇬🇭 🇬🇮 🇬🇱 🇬🇲 🇬🇳 🇬🇵 🇬🇶 🇬🇷 🇬🇸 🇬🇹 🇬🇺 🇬🇼 🇬🇾 🇭🇰 🇭🇲 🇭🇳 🇭🇷 🇭🇹 🇭🇺 🇮🇨 🇮🇩 🇮🇪 🇮🇱 🇮🇲 🇮🇳 🇮🇴 🇮🇶 🇮🇷 🇮🇸 🇮🇹 🇯🇪 🇯🇲 🇯🇴 🇯🇵 🇰🇪 🇰🇬 🇰🇭 🇰🇮 🇰🇲 🇰🇳 🇰🇵 🇰🇷 🇰🇼 🇰🇾 🇰🇿 🇱🇦 🇱🇧 🇱🇨 🇱🇮 🇱🇰 🇱🇷 🇱🇸 🇱🇹 🇱🇺 🇱🇻 🇱🇾 🇲🇦 🇲🇨 🇲🇩 🇲🇪 🇲🇫 🇲🇬 🇲🇭 🇲🇰 🇲🇱 🇲🇲 🇲🇳 🇲🇴 🇲🇵 🇲🇶 🇲🇷 🇲🇸 🇲🇹 🇲🇺 🇲🇻 🇲🇼 🇲🇽 🇲🇾 🇲🇿 🇳🇦 🇳🇨 🇳🇪 🇳🇫 🇳🇬 🇳🇮 🇳🇱 🇳🇴 🇳🇵 🇳🇷 🇳🇺 🇳🇿 🇴🇲 🇵🇦 🇵🇪 🇵🇫 🇵🇬 🇵🇭 🇵🇰 🇵🇱 🇵🇲 🇵🇳 🇵🇷 🇵🇸 🇵🇹 🇵🇼 🇵🇾 🇶🇦 🇷🇪 🇷🇴 🇷🇸 🇷🇺 🇷🇼 🇸🇦 🇸🇧 🇸🇨 🇸🇩 🇸🇪 🇸🇬 🇸🇭 🇸🇮 🇸🇯 🇸🇰 🇸🇱 🇸🇲 🇸🇳 🇸🇴 🇸🇷 🇸🇸 🇸🇹 🇸🇻 🇸🇽 🇸🇾 🇸🇿 🇹🇦 🇹🇨 🇹🇩 🇹🇫 🇹🇬 🇹🇭 🇹🇯 🇹🇰 🇹🇱 🇹🇲 🇹🇳 🇹🇴 🇹🇷 🇹🇹 🇹🇻 🇹🇼 🇹🇿 🇺🇦 🇺🇬 🇺🇲 🇺🇳 🇺🇸 🇺🇾 🇺🇿 🇻🇦 🇻🇨 🇻🇪 🇻🇬 🇻🇮 🇻🇳 🇻🇺 🇼🇫 🇼🇸 🇽🇰 🇾🇪 🇾🇹 🇿🇦 🇿🇲 🇿🇼 🏴󠁧󠁢󠁥󠁮󠁧󠁿 🏴󠁧󠁢󠁳󠁣󠁴󠁿 🏴󠁧󠁢󠁷󠁬󠁳󠁿
 
-### 参考链接
+## 参考链接
 
 - [Full Emoji List, v14.0](https://unicode.org/emoji/charts/full-emoji-list.html)
 - [Unicode Emoji data files](https://unicode.org/Public/emoji/14.0/emoji-test.txt)

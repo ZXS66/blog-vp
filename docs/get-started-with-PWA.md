@@ -10,15 +10,15 @@ date: 2021-05-06 12:54:15
 
 `PWA` 现在越来越流行了。虽然国内见得不多，但国外已经非常常见了。闲来无事，那就把本博客改造成 `PWA` 好了。
 
-### PWA 介绍
+## PWA 介绍
 
 此处省略一万字。[<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 
-### 起步
+## 起步
 
 参考的是 [<i class="mdui-icon material-icons">link</i> 这篇文档](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/get-started)。~~此处又省略了一万字。~~
 
-### 一个小 bug
+## 一个小 bug
 
 `@pwabuilder/pwaupdate` 组件 [默认](https://github.com/pwa-builder/pwa-update#api) 加载的 `service worker` 是**当前路径**下的 "pwabuilder-sw.js" 文件。可是，当路径变了，比如跳到了更深一层目录，`service worker` 就不能正常加载了。解决办法是在注册 `service worker` 时（执行 `pwabuilder-sw-register.js` 文件），指定 `swpath` 为 "`/pwabuilder-sw.js`"。
 
@@ -30,7 +30,7 @@ el.setAttribute("swpath", "/pwabuilder-sw.js");
 document.body.appendChild(el);
 ```
 
-### 强制更新
+## 强制更新
 
 上线后一段时间发现，`PWA` 是可以正常工作了，也能离线使用，但是因为使用的是 `Cache-First` 策略，所以会发生服务器端其实已经更新了，但是本地一直看不到最新版本。PC 端还好，可以使用强制刷新 (`Ctrl`+`Shift`+`R`或者`Ctrl`+`Shift`+`F5`组合键或者长按刷新按钮)来查看最新版本，手机端怎么办。手机浏览器又没有强制刷新功能。
 
@@ -70,7 +70,7 @@ workbox.routing.registerRoute(
 
 发布上线，测试，完美解决问题！😄
 
-### 参考链接
+## 参考链接
 
 - [Get started with Progressive Web Apps (Chromium)](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/get-started)
 - [When and how does a PWA update itself?](https://stackoverflow.com/questions/49739438/when-and-how-does-a-pwa-update-itself)

@@ -20,7 +20,7 @@ Unicode 码： [u30ede](https://glyphwiki.org/wiki/u30ede) （繁体，日常使
 
 所以，如果你的电脑下载了相关的字体扩展/插件，或者更新了最新版的 Unicode 字符集，则可以正常输入和显示这个汉字。
 
-### 扩展
+## 扩展
 
 1. 得益于网络的发达（媒体的炒作），还有很多臆造字其实是真的不能正常输入和显示的，比如招财进宝合体字。
    *2021/2/6更新：[如何网页显示臆造字](/zhaocaijinbao)*
@@ -33,7 +33,7 @@ Unicode 码： [u30ede](https://glyphwiki.org/wiki/u30ede) （繁体，日常使
 
 4. 当然，还有很多其他方法可以展示生僻字，如 [icon font](https://www.iconfont.cn/)、[LaTex](https://www.latex-project.org/)、Word/PDF 排版等等，欢迎补充。
 
-### 参考链接
+## 参考链接
 
 - [汉字编码扩充，终于可以打出这些生僻字了！](https://www.sohu.com/a/379244647_355019)
 - [生僻字-陈柯宇-网易云音乐](https://music.163.com/#/song?id=518781004&market=baiduqk)

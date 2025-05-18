@@ -41,9 +41,8 @@ emmm，不够优雅，但至少能解决大部分场景问题。
 -- todo
 ```
 
-### 参考链接
+## 参考链接
 
 - [mysql根据逗号将一行数据拆分成多行数据](https://www.cnblogs.com/David3290/p/11378579.html)
 - [How to split the name string in mysql?](https://stackoverflow.com/questions/14950466/how-to-split-the-name-string-in-mysql)
 - [The STRING_SPLIT function in SQL Server](https://www.sqlshack.com/the-string-split-function-in-sql-server/)
-

@@ -22,21 +22,21 @@ tags: [随笔, javascript, react, hooks]
 
 官方的解释：
 
-##### 类组件不能很好重用状态逻辑代码
+- 类组件不能很好重用状态逻辑代码
 
-使用 Hooks 则可以在不改变组件层次地前提下很好地重用状态逻辑，因为状态逻辑已经从组件中抽离出来了。
+    使用 Hooks 则可以在不改变组件层次地前提下很好地重用状态逻辑，因为状态逻辑已经从组件中抽离出来了。
 
-##### 复杂组件变得越来越难以理解（维护）
+- 复杂组件变得越来越难以理解（维护）
 
-其实 React JS 以前的代码我也不喜欢，即使它使用了 JSX。因为感觉把所有东西都揉在一起了，这和以前 JSP，ASP.NET 不是差不多嘛。是时代在倒退吗？我喜欢模板（HTML）、样式（CSS）、逻辑（JS）分的清清楚楚的，就像 Angular 那样。我的确是个老顽固，但是我在用 Angular 之前，也用了 [mustache](https://github.com/mustache/mustache) 和 scss，感觉都挺好的。
+    其实 React JS 以前的代码我也不喜欢，即使它使用了 JSX。因为感觉把所有东西都揉在一起了，这和以前 JSP，ASP.NET 不是差不多嘛。是时代在倒退吗？我喜欢模板（HTML）、样式（CSS）、逻辑（JS）分的清清楚楚的，就像 Angular 那样。我的确是个老顽固，但是我在用 Angular 之前，也用了 [mustache](https://github.com/mustache/mustache) 和 scss，感觉都挺好的。
 
-使用 Hooks 就逼迫我们把组件拆分成更小的方法了，模板和逻辑可以不用像以前那样，严重依赖于组件的生命周期。
+    使用 Hooks 就逼迫我们把组件拆分成更小的方法了，模板和逻辑可以不用像以前那样，严重依赖于组件的生命周期。
 
-##### 程序员和机器并不能更好理解类
+- 程序员和机器并不能更好理解类
 
-emmm，前端等了这么多年，终于有了 class （虽然只是个语法糖），前端开发千辛万苦学会了面向对象，你现在说，不要面向对象？好吧，你说的都对，我继续学还不行吗！
+    emmm，前端等了这么多年，终于有了 class （虽然只是个语法糖），前端开发千辛万苦学会了面向对象，你现在说，不要面向对象？好吧，你说的都对，我继续学还不行吗！
 
-不过也的确是这样，机器里才没有类的概念，函数倒是基本上每个编程语言都有。使用函数（Hooks）可以让我们更贴近机器，也就能更好的利用 React 的特性。
+    不过也的确是这样，机器里才没有类的概念，函数倒是基本上每个编程语言都有。使用函数（Hooks）可以让我们更贴近机器，也就能更好的利用 React 的特性。
 
 ## 我的理解
 
@@ -47,5 +47,4 @@ emmm，前端等了这么多年，终于有了 class （虽然只是个语法糖
 - [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
 - [轻松学会 React 钩子：以 useEffect() 为例](http://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html)
 - [ReactJS | useState Hook](https://www.geeksforgeeks.org/reactjs-usestate-hook/)
-- ~~[带你快速了解React Hooks](https://mp.weixin.qq.com/s?__biz=MzU0OTExNzYwNg==&mid=2247486638&idx=1&sn=6168cd4c6ebd46bb7626d5e1acac199a&chksm=fbb58767ccc20e71c147abd5816d85c85addfe9bb7f7ae531b3be6874e82bbf3aeff10b3151f&mpshare=1&scene=1&srcid=1030zRXiWBapn8lTHy7okyV4&sharer_sharetime=1604039376391&sharer_shareid=fc704ae6aea43f30cbec7d9e541d4beb&exportkey=A9iZHUit3MmzB9UtwIFqMKE%3D&pass_ticket=tzMbsF%2FeUkmqmIp8swkg9KboR45uJ3wADbDOUq8VTpvz9SXqBf7n2B5O3xo%2Fhbg6&wx_header=0#rd)~~
 - [带你快速了解React Hooks](https://mp.weixin.qq.com/s/FQzSFwx3wWqwLCeQZ1eAEA)

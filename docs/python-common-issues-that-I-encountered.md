@@ -11,7 +11,7 @@ date: 2022-01-21 17:21:59
 
 为此，记录一下我遇到的一些 `Python` 常见问题，以后再遇到直接翻这篇文章就好了。
 
-### 设置 pip 镜像源 
+## 设置 pip 镜像源 
 `pip install` 默认使用的是 [pypi.org](https://pypi.org) 的镜像源。国内虽然也能访问，但访问速度有限，偶尔还会抽风。为此，推荐使用国内镜像源，比如清华大学、阿里云什么的。比如下面脚本就是全局设置清华大学数据源。
 
 ``` sh
@@ -20,7 +20,7 @@ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 设置完后，安装速度直接起飞！ ✈
 
-### 使用代理
+## 使用代理
 
 `Python` 程序，包括使用 `pip` 安装第三方库，默认是不会使用系统的网络配置的。所以就会发生一种情况，电脑能够正常打开网页，但是运行 `Python` 程序，或者 `pip install` 总是报错说无法访问网络。可能原因之一是，电脑使用了代理脚本或者代理服务器。而 `Python` 或 `pip` 并没有使用代理。
 
@@ -31,7 +31,7 @@ pip install mysql-connector-python --proxy http://{username}:{password}@{host}:{
 - *Note 1: `Python`连接 `MySQL` 数据库以前使用的是 [mysql.connector](https://pypi.org/project/mysql-connector/) 这个包，现在废弃了，Python 官方推荐使用 [mysql-connector-python](https://pypi.org/project/mysql-connector-python/)。如果你使用过程当中遇到一些奇怪的报错，请先卸载这两个包(`pip uninstall mysql.connector mysql-connector-python`)，再重新安装新的包 (`pip install mysql-connector-python`)*
 - *Note 2: 代理如果不需要登陆，用户名和密码可不填；如果需要用户名和密码的话，需要转义特殊字符 ([encodeURIComponent](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)，比如 `@` 字符就要用 `%40` 代替)*
 
-### 类变量 (class variables)
+## 类变量 (class variables)
 
 `Python` 的写法和其他编程语言不太一样，我们在类中声明的变量，默认是 [类变量](https://docs.python.org/3/tutorial/classes.html#class-and-instance-variables)；通常在其他编程语言中，比如 `C#`、`Java`、`JS` 等，则是实例变量。
 
@@ -105,7 +105,7 @@ Dog.kind pastoral
 ----------------
 ```
 
-### 使用 Anaconda 环境运行 py 文件
+## 使用 Anaconda 环境运行 py 文件
 
 运行环境管理从来都是程序界永恒的难题。随着 `Jupyter` 的流行，`Anaconda` 也变得使用的越来越广泛了。但是我在我本地，使用 `Jupyter` 和 `Spyder` 编写的程序运行调试都没问题，我还用 “Anaconda Prompt (Anaconda3)” 单独运行也没有问题，通过测试了，我要部署到服务器怎么办就报错了？（“程序在我本地运行的好好的，怎么搬到服务器上就不行了？”）
 
@@ -158,7 +158,7 @@ python main.py
 
 顺便提一下，建议安装 `Anaconda` 的时候，选择使用 `Anaconda` 作为默认的 `Python` 解释器，这样就不用维护多个 `Python` 版本了，且你在 `Spyder` 或者 `Jupyter Notebook` 运行的结果和你直接在命令行里运行 `Python` 命令结果一样了，不会出现各种模块找不到的问题。
 
-### 安装成功后无法执行命令
+## 安装成功后无法执行命令
 
 某些情况下，安装成功后，无法执行命令，比如：
 
@@ -173,7 +173,7 @@ playwright install
 %USERPROFILE%\AppData\Roaming\Python\Python310\Scripts
 ```
 
-### 参考链接
+## 参考链接
 
 - [run_python_script_in_conda_env.bat](https://gist.github.com/maximlt/531419545b039fa33f8845e5bc92edd6)
 - [Installing packages using pip and virtual environments](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments)

@@ -7,7 +7,7 @@ tags:
 date: 2021-07-24 17:31:01
 ---
 
-### 背景
+## 背景
 
 此前我已有一个 [scrapy](https://docs.scrapy.org/en/latest/index.html) 爬虫项目，一切看起来都挺美好的。能爬到动态加载的数据，用 [scrapyd](https://scrapyd.readthedocs.io/en/stable/) 管理爬虫任务，还自己写了一个创建爬虫任务的小工具。但是，写爬虫就是这样，即使矛多锐利，盾也不会差，不会出现其中某一个特别强另一个特别弱的情形。二者处在一个动态平衡的局面，可能现在是矛更厉害，过段时间盾一定会打回来的（反爬虫进化）；也可能现在是盾厉害更胜一筹，但过不了多久一定会有大神破解出来（变态如 12306 都能被破解）。所以，不要追求完美和一劳永逸，保持乐观和持续学习的心态就好了！ 😄
 
@@ -25,7 +25,7 @@ date: 2021-07-24 17:31:01
 
 为什么是它呢，而不是前端自动测试使用更广泛的 [Selenium](https://www.selenium.dev/)、[PhantomJS]() 或者 [Electron](http://electron.atom.io/)？emmm，因为用过。🙂
 
-### 范例
+## 范例
 
 **声明：以下代码仅供学习使用，如果您坚持要用在产品环境或者商用，概不负责！！！**
 
@@ -385,13 +385,13 @@ nm.useragent(
   });
 ```
 
-### 最佳实践
+## 最佳实践
 
 1. [evaluate](https://github.com/segmentio/nightmare/blob/HEAD/Readme.md#evaluatefn-arg1-arg2) 其实是把方法体注入到页面里，所以，假如你的 `evaluate` 方法体引用了外部变量，那肯定是不行的。解决办法也很简单，使用立即执行函数(IIFE，Immediately invoked function expression)传入外部变量即可。
 2. [evaluate](https://github.com/segmentio/nightmare/blob/HEAD/Readme.md#evaluatefn-arg1-arg2) 记得 `catch`，否则很容易中断执行。
 3. 记得设置 [loadTimeout](https://github.com/segmentio/nightmare#loadtimeout-default-infinite)，因为默认是 `infinite`！如果某些网站（你懂的）一直不报错，也不返回结果，或者返回结果超级慢，那你的这个爬虫程序就卡在这里了。
 4. 翻页的话，使用之前的 `nightmare` 实例就行。
 
-### 参考链接
+## 参考链接
 
 - [Nightmare JS](https://github.com/segmentio/nightmare)

@@ -40,6 +40,6 @@ mysqlconn.connect(user=user,password=password,database=database,charset='utf8',c
 
 但是，其实你把同样的拼接语句，放在 `Python` 或者 `C#` 代码里直接运行，都是可以按照预期返回结果的（前提：正确配置连接编码）。
 
-### 参考链接
+## 参考链接
 
 - [Unicode HOWTO - Python](https://docs.python.org/3/howto/unicode.html)

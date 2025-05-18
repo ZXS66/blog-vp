@@ -89,7 +89,7 @@ public class DebounceDispatcher
 - 节流很简单，就不过多解释了；
 - 去抖，此处用到了三个关键函数： [Task.Delay](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.delay?view=net-5.0) （类似于 js 中 setTimeout ）、[Task.ContinueWith](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.continuewith?view=net-5.0) （类似于 js 中的 Promise.then，不同的是后者接受两个参数，分别是成功回调和错误回调，而前者仅有一个回调，成功和错误都在一个里面）、[CancellationTokenSource.Cancel](https://docs.microsoft.com/en-us/dotnet/api/system.threading.cancellationtokensource.cancel?view=net-5.0)。
 
-### 参考链接
+## 参考链接
 
 - [Task.Delay Method](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.delay?view=net-5.0)
 - [Task.ContinueWith Method](https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.task.continuewith?view=net-5.0)

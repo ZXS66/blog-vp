@@ -35,19 +35,23 @@ date: 2022-07-14 13:15:25
 4. 按 Excel 文件规范，把二维表格数据转换成 Excel 文件
 5. 保存 Excel 文件
 
-### 选择编程语言
+## 选择编程语言
 
 这个就无所谓了，既然是造轮子，哪个语言顺手就用哪个。
 
 ### 读取 CSV 文件内容
+*coming soon...*
 ### 按 CSV（Comma Separated Values）文件规范，转换成二维表格数据
+*coming soon...*
 
 上面两个内容我放一起，主要是~~我懒~~考虑到读取 CSV 文件实在是太常见了，网上已经有很多成熟的解决方案。我这里引用的是 [ClosedXML]()。
 
 ### 按 Excel 文件规范，把二维表格数据转换成 Excel 文件
+*coming soon...*
 ### 保存 Excel 文件
+*coming soon...*
 
-同上，保存数据到 Excel 也太稀疏平常了。我这里引用的是 [ClosedXML]()。
+同上，保存数据到 Excel 也太稀疏平常了。我这里引用的是 [ClosedXML](https://www.nuget.org/packages/ClosedXML/)。
 
 综上，我们需要做的，就非常少了，仅剩一些业务代码。
 

@@ -14,7 +14,7 @@ date: 2021-06-20 23:26:00
 
 安装及环境初始化，这里就略过了。官方已经提供了很详细的 [101 教程](https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html)。
 
-### 注意事项
+## 注意事项
 
 1. 自 2021/4/13 起，微信旧 API [wx.getUserInfo](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserInfo.html) 不再弹出弹窗，并直接返回匿名的用户个人信息，取而代之的是 [wx.getUserProfile](https://developers.weixin.qq.com/miniprogram/dev/api/open-api/user-info/wx.getUserProfile.html)，详细参考 [小程序官方公告](https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801)；
 2. 小程序端的 [数据缓存 API](https://developers.weixin.qq.com/miniprogram/dev/api/storage/wx.setStorage.html)：
@@ -38,19 +38,19 @@ date: 2021-06-20 23:26:00
    |数据库·集合限制|15个|50个|
 4. 官方 WeUI 组件库扩展了小程序原生组件。虽然还是明显不够用，但总比没有强。比如 [mp-icon](https://developers.weixin.qq.com/miniprogram/dev/extended/weui/icon.html) 就省的我们去搜寻或者设计基础图标了。
 
-### 云开发
+## 云开发
 
 现在创建微信小程序项目，默认开启云开发选项，方便大家快速部署原型。
 
-### 一点个人感受
+## 一点个人感受
 
 微信小程序开发更接近于目前国内最火的 `Vue` 开发，不推荐操作 `DOM`，而是使用各种集成指令。但是小程序开发并不等于 `H5` 开发，很多操作都是基于微信这个沙盒。虽说确实保障了用户数据安全以及个人隐私，但开发者开发体验很受影响，有点像是带着脚镣跳舞吧，其实就是阉割版的 `H5` 开发。这应该是各种权衡下来的结果。
 
-### 预览
+## 预览
 
 ![时代残党小程序](/img/WeChat-mini-program-1st-step/gh_d8e358fd13d3_258.jpg)
 
-### 参考链接
+## 参考链接
 
 - [微信官方文档·小程序](https://developers.weixin.qq.com/miniprogram/dev/framework/)
 - [源码](https://github.com/ZXS66/nextwave-miniprogram)

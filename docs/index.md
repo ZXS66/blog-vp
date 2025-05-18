@@ -15,12 +15,18 @@ hero:
       link: https://johnzhu.online/ng#/resume/2025
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: ⚡️
+    title: Adocs, The DX that can't be beat
+    details: Lorem ipsum...
+  - icon: 🎉
+    title: Power of Vue meets Markdown
+    details: Lorem ipsum...
+  - icon: 🔥
+    title: Simple and minimal, always
+    details: Lorem ipsum...
+  - icon: 🎀
+    title: Stylish and cool
+    details: Lorem ipsum...
 
 sidebar: false
 

@@ -14,7 +14,7 @@ date: 2021-06-09 17:19:13
 
 可能你遇到的问题和我的还不太一样，更多可能原因，请参考 [链接 2](https://www.xspdf.com/resolution/51316274.html)
 
-### 参考链接
+## 参考链接
 
 - [Chrome: window.print() print dialogue opens only after page reload (javascript)](https://stackoverflow.com/questions/18622626/chrome-window-print-print-dialogue-opens-only-after-page-reload-javascript/46051099#46051099)
 - [Google chrome printing issues 2020](https://www.xspdf.com/resolution/51316274.html)

@@ -8,7 +8,7 @@ date: 2020-11-28 09:54:13
 
 鉴于细节过多，内容过于繁杂，就不一一列举每个整改步骤了。很多内容在系统设计之初就应当考虑在内，此处仅记录我在完成产品开发后，公司内部安全审核团队要求整改的点。
 
-### Session timeout
+## Session timeout
 
 前期便于快速原型开发及上线，此应用采用的是 Windows 认证。而一般此类应用不会考虑到 Session timeout 时长。但既然审查出了这个 finding （发现），那就要整改了。
 
@@ -22,11 +22,11 @@ date: 2020-11-28 09:54:13
 </configuration>
 ```
 
-### 删除服务器版本
+## 删除服务器版本
 
 默认 ASP.NET Web 应用程序的 HTTP 请求的响应头，会夹带 `IIS`、`ASP.NET MVC` 及其版本信息。要想成为健壮的网页应用程序，就必须移除这些信息。以下是要做的改动:
 
-###### web.config 文件
+### web.config 文件
 
 ``` xml
 <configuration>
@@ -46,7 +46,7 @@ date: 2020-11-28 09:54:13
 </configuration>
 ```
 
-###### Global.asax.cs 文件
+### Global.asax.cs 文件
 
 ``` cs
 namespace NGL.API
@@ -72,8 +72,7 @@ namespace NGL.API
 }
 ```
 
-
-### Content-Security-Policy (CSP) 响应头
+## Content-Security-Policy (CSP) 响应头
 
 通过声明 `CSP` 响应头，可以有效减少现代浏览器在动态加载资源的时候被 `XSS` （跨站攻击）风险。标准做法是在**服务器端**添加，不过也可以在 `html` 文件中添加 `meta` 头声明。具体请移步至 [官网](https://content-security-policy.com/)。
 
@@ -94,7 +93,7 @@ namespace NGL.API
 </configuration>
 ```
 
-###### 2020/12/8 更新
+### 2020/12/8 更新
 
 上文所展示代码中，有一段代码 `'unsafe-inline'`，其实这依然是不安全的做法。严格的 CSP 策略会要求连这个都禁用 [<fa-link/>](https://content-security-policy.com/unsafe-inline/)。
 
@@ -108,7 +107,7 @@ namespace NGL.API
 
 从上面 `web.config` 的 CSP 配置中，可以看出，默认浏览器是默认(推荐)禁止 `unsafe-inline` 的 script 和 style。即内联的脚本和样式都是被禁止的。
 
-##### 2021/2/14 更新
+### 2021/2/14 更新
 
 网络安全有一系列响应头，除了 `Content-Security-Policy` 之外，还有 `X-Frame-Options`、`Strict-Transport-Security`、`X-XSS-Protection`、`X-Content-Type-Options`、`Referrer-Policy`、`Permissions-Policy` 等。想要查看您的网站还存在哪些问题，可以查看 [此网站](https://securityheaders.com/)。有关各响应头的详情，请查看 [MDN](https://developer.mozilla.org/en-US/)。
 
@@ -140,7 +139,7 @@ namespace NGL.API
 </configuration>
 ```
 
-### clientCache 设置 Cache-Control
+## clientCache 设置 Cache-Control
 
 公司要求禁用 `cache` ？？？
 
@@ -154,7 +153,7 @@ namespace NGL.API
 </configuration>
 ```
 
-### 产品环境隐藏错误细节
+## 产品环境隐藏错误细节
 
 这个简单，改改 `customErrors` 的模式即可。
 
@@ -167,7 +166,7 @@ namespace NGL.API
 </configuration>
 ```
 
-### 连接字符串加密
+## 连接字符串加密
 
 `web.config` 中连接字符串 (`connection string`) 默认是不加密的。如果启用 Windows 集成认证，那倒问题不大，但是有些情形下，会直接提供 `user id` 和 `password`，一旦泄露，会造成困扰。
 
@@ -183,11 +182,11 @@ namespace NGL.API
 | 6    | AES加密    |            | 需要密钥解密     |                                                                                                     |
 | 7    | RSA加密    |            | 公钥加密私钥解密 |                                                                                                     |
 
-###### BASE64
+### BASE64
 
 这个算法其实就是简单地把人类能读懂的语言文字变成 ASCII 编码。这样处理之后，人类是很难读懂了，但是机器读懂它简直不能太 easy。所以，一般这个算法不会单独用来加密，但是可以用来混淆内容。
 
-###### MD5
+### MD5
 
 emmm，严格来说，这个不算是加密算法，它只是信息摘要算法，就是把一大堆的内容转换成一串 ASCII 编码，同时这个算法有以下两个特点：
 
@@ -196,15 +195,15 @@ emmm，严格来说，这个不算是加密算法，它只是信息摘要算法�
 
 这个算法（目前）是不可解密，所以不存在密钥一说。常用于校验我们从网上下载下来的文件是否被人恶意修改或植入病毒。在当前场景不适用。
 
-###### SHA 
+### SHA
 
 MD5 的升级版。
 
-###### AES 对称加密
+### AES 对称加密
 
 加密和解密使用同一套密码，
 
-###### RSA 非对称加密
+### RSA 非对称加密
 
 emmm，当今互联网社会的基石啊，多少人都在使用 `RSA` 当作公司 `VPN` 连接的双重身份认证凭证。加密的密钥（公钥）和解密的密钥（私钥）不一样，使用公钥加密的信息可以在互联网上传播，因为没有私钥解密的话此信息就算是天书吧。
 
@@ -276,7 +275,7 @@ public class Program
 }
 ```
 
-###### 使用 aspnet_regiis 加密
+## 使用 aspnet_regiis 加密
 
 *2020/12/16 更新*
 
@@ -290,7 +289,7 @@ public class Program
 
 2. 解密：`ASPNET_REGIIS -pdf "connectionStrings" "D:\inetpub\wwwroot\applicationFolder"`
 
-### 表单校验
+## 表单校验
 
 表单校验，不仅仅是前端的事。好的系统，会在 API 层面，甚至数据库层面都会加上用户输入验证。验证要点包括但不限于：
 
@@ -301,7 +300,7 @@ public class Program
 
 前三项可能会根据业务，稍有不同，但基本大同小异，此处就不过多展开了。
 
-##### 防止 SQL 注入
+## 防止 SQL 注入
 
 [ScottGu](https://weblogs.asp.net/scottgu/Tip_2F00_Trick_3A00_-Guard-Against-SQL-Injection-Attacks) 早在十多年前就教大家如何防止 SQL 注入了，我搬一下砖：
 
@@ -311,20 +310,26 @@ public class Program
 4. 确保你编写了自动单元测试，显式的验证了你的数据访问层和应用程序能够很好防御 SQL 注入攻击；
 5. 锁定你的数据库，仅授权网页应用程序访问它是功能所需的最小权限集。
 
-##### 防止 XSS 攻击
+## 防止 XSS 攻击
 
 `ASP.NET` 中防止 `XSS` 有一套内置的办法：[AntiXssEncoder](https://docs.microsoft.com/en-us/dotnet/api/system.web.security.antixss.antixssencoder?view=netframework-4.8)。
 
 1. 修改 `web.config`，启用 AntiXssEncoder:
+
    ```xml
    <httpRuntime encoderType="System.Web.Security.AntiXss.AntiXssEncoder" />  
    ```
+
 2. 编码所有用户输入/潜在 `XSS` 攻击的参数：
+
    ```cs
    user_comment = System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(user_comment, true);
    ```
+
 3. 解码上一步编码的数据（以下代码仅展示 `Angular` 中如何解码，实际也可采用纯 `js`/`React`/`Vue` 等其它方式）：
+
    ```ts
+
   import { Pipe, PipeTransform } from '@angular/core';
 
   /** Used to map HTML entities to characters. */
@@ -352,7 +357,7 @@ public class Program
           //     return String.fromCharCode(dec);
           // });
           // solution 3 (enhanced version for solution 2)
-          // reference: https://github.com/lodash/lodash/blob/2f79053d7bc7c9c9561a30dda202b3dcd2b72b90/unescape.js
+          // reference: <https://github.com/lodash/lodash/blob/2f79053d7bc7c9c9561a30dda202b3dcd2b72b90/unescape.js>
           const escapedHtml = (value && reHasEscapedHtml.test(value))
               ? value.replace(reEscapedHtml, (entity) => (htmlUnescapes[entity] || '\''))
               : (value || '');
@@ -361,12 +366,13 @@ public class Program
           });
       }
   }
+
    ```
-##### 防止 CSRF 攻击
+## 防止 CSRF 攻击
 
 ASP.NET 中防止 CSRF 攻击很简单，前端页面 (.cshtml) 中添加 `@Html.AntiForgeryToken()`，后台 Controller 代码中，在相应的 Action 加上 \[ValidateAntiForgeryToken\] 即可。
 
-### 参考链接
+## 参考链接
 
 - [常见的加密解密算法](https://www.cnblogs.com/qianjinyan/p/10418750.html)
 - [谷歌CSP工程化实践导读](https://mp.weixin.qq.com/s/YOpb8x-3Lp_WomRu-p1dIw)
