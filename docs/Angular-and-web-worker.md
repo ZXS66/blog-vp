@@ -65,7 +65,7 @@ ng generate webWorker [name]
 
 一般情况下，web worker 是需要操作请求服务器数据的，所以这里简单贴一下请求代码
 
-### `xxxx.worker.ts` 文件：
+### `xxxx.worker.ts` 文件
 
 ``` TypeScript
 /// <reference lib="webworker" />
@@ -227,7 +227,7 @@ export class WorkerMessage {
 
 emmmm，一切都按照预期走了，没什么问题。除了：Google Chrome 调试 Web Worker 真的是鸡肋！！！以后真的在项目中大量使用了再说吧。。。。。。
 
-## 参考链接：
+## 参考链接
 
 - [Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [The Basics of Web Workers](https://www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted)

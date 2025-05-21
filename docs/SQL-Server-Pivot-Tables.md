@@ -97,12 +97,12 @@ GO
 
 ``` sql
 CREATE FUNCTION [dbo].[fx_STRING_SPLIT](
-	@SourceString NVARCHAR(MAX)
-	,@Seperator VARCHAR(25)=','
+ @SourceString NVARCHAR(MAX)
+ ,@Seperator VARCHAR(25)=','
 )
 RETURNS @ResultTable TABLE(
-	[Position] INT IDENTITY(1,1),
-	[Value] NVARCHAR(MAX)
+ [Position] INT IDENTITY(1,1),
+ [Value] NVARCHAR(MAX)
 )
 AS
 /**************************************************************
@@ -118,7 +118,7 @@ SET @w_xml = N'<root><i>' + replace(@SourceString, @Seperator,'</i><i>') + '</i>
 INSERT INTO @ResultTable
 ([Value])
 SELECT 
-	[i].value('.', 'NVARCHAR(MAX)') AS Value 
+ [i].value('.', 'NVARCHAR(MAX)') AS Value 
 FROM 
 @w_xml.nodes('//root/i') AS [Items]([i]);
 RETURN;
