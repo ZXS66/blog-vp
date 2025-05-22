@@ -49,7 +49,7 @@ ng update --all --force
 
 好了，终于可以进入正题啦！
 
-## 在项目目录中，创建一个基础的 Web Worker 
+## 在项目目录中，创建一个基础的 Web Worker
 
 ``` shell
 ng generate webWorker [name]

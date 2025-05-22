@@ -78,17 +78,17 @@ SSMA 网上有很多图文/视频教程，各位可以自行搜索。期间可�
 -- approach 3: CAST(`list_date` AS DATE) AS `EY_List_date`,  -- for date type
 ```
 
-### 优势：
+### 优势
 1. 性能快；
 2. 人工介入少，不易出错；
 3. 可自动化，SQL Server 中可以直接查看每次运行的报告。
 
-### 缺点：
+### 缺点
 1. SSIS 任务**只能使用 Windows 认证**。前期环境配置需要花费一定时间；
 2. 开发 SSIS 时，部分提示信息不够准确清晰；
 3. 第一次需要手动同步 Schema，以后每次 Schema 有变动，SSIS package 也需要跟着变动。
 
-## 参考链接：
+## 参考链接
 
 - [Download Microsoft SQL Server Migration Assistant for MySQL](https://www.microsoft.com/en-us/download/details.aspx?id=54257)
 - [MySQL :: Download Connector/ODBC](https://dev.mysql.com/downloads/connector/odbc/)

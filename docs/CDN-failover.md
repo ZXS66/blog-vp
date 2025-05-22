@@ -181,7 +181,7 @@ hexo.extend.helper.register("js_cdn", function(item) {
 
 既然动态添加的 `async` 脚本执行顺序不确定，那 `defer` 脚本如何呢？？
 
-## 参考链接：
+## 参考链接
 
 - [&lt;script&gt; async, defer, async defer, module, nomodule, src, inline - the cheat sheet](https://gist.github.com/jakub-g/385ee6b41085303a53ad92c7c8afd7a6)
 - [Scripts: async, defer](https://javascript.info/script-async-defer)
