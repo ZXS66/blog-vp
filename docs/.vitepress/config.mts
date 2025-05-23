@@ -54,27 +54,6 @@ const vitePressOptions: UserConfig<DefaultTheme.Config> = {
     }
   },
   buildEnd: genFeed
-  // buildEnd: async ({ outDir }) => {
-  //   // https://laros.io/generating-a-dynamic-sitemap-with-vitepress
-  //   console.log("🚀 Generating sitemap...");
-  //   const sitemap = new SitemapStream({ hostname: BLOG_HOST });
-  //   const pages = await createContentLoader('*.md').load();
-  //   const writeStream = createWriteStream(path.resolve(outDir, 'sitemap.xml'));
-  //   sitemap.pipe(writeStream);
-  //   const basePath = "/blog"
-  //   pages.forEach((page) => sitemap.write(
-  //     page.url
-  //       // Strip `index.html` from URL
-  //       .replace(/index.html$/g, '')
-  //       // Optional: if Markdown files are located in a subfolder
-  //       .replace(/^\/docs/, basePath)
-  //   ));
-  //   sitemap.end();
-  //   await new Promise((resolve) => writeStream.on('finish', () => {
-  //     console.log("👏 sitemap.xml generated!");
-  //     resolve(true);
-  //   }));
-  // }
 };
 
 export default defineConfig(vitePressOptions);

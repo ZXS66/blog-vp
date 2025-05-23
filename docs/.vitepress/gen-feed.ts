@@ -5,7 +5,7 @@ import { createContentLoader, type SiteConfig } from 'vitepress'
 
 import { BLOG_HOST } from "./constants";
 
-const baseUrl =  BLOG_HOST + '/blog';
+const baseUrl = BLOG_HOST + '/blog';
 
 export async function genFeed(config: SiteConfig) {
   const feed = new Feed({
@@ -39,12 +39,7 @@ export async function genFeed(config: SiteConfig) {
       description: excerpt,
       content: html?.replace(/&ZeroWidthSpace;/, ''),
       author: [
-        {
-          name: frontmatter.author,
-          link: frontmatter.twitter
-            ? `https://twitter.com/${frontmatter.twitter}`
-            : undefined
-        }
+        { name: 'ZXS', link: 'https://github.com/ZXS66' }
       ],
       date: frontmatter.date
     })

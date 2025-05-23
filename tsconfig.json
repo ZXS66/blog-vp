@@ -5,12 +5,18 @@
         "strict": true,
         "jsx": "preserve"
     },
+    "exclude": [
+        "node_modules"
+    ],
+    "files": ["placeholder.ts"],
     "include": [
         "docs/**/*.ts",
         "docs/**/*.vue",
         "docs/**/*.md",
     ],
     "vueCompilerOptions": {
-      "vitePressExtensions": [".md"],
+        "vitePressExtensions": [
+            ".md"
+        ],
     },
 }
