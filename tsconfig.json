@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "NodeNext",
+        "allowJs": true,
+        "strict": true,
+        "jsx": "preserve"
+    },
+    "include": [
+        "docs/**/*.ts",
+        "docs/**/*.vue",
+        "docs/**/*.md",
+    ],
+    "vueCompilerOptions": {
+      "vitePressExtensions": [".md"],
+    },
+}

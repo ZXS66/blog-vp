@@ -4,16 +4,16 @@ import type { Theme } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 // import DefaultTheme from 'vitepress/theme-without-fonts';
 import './style.css';
-// import Layout from "./Layout.vue";
+import MyLayout from "./MyLayout.vue";
 
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
-  // Layout: DocLayoutExt,
+  // Layout: () => {
+  //   return h(DefaultTheme.Layout, null, {
+  //     // https://vitepress.dev/guide/extending-default-theme#layout-slots
+  //   })
+  // },
+  Layout: MyLayout,
   enhanceApp({ app, router, siteData }) {
     // ...
   }

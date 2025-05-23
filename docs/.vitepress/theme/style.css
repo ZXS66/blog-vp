@@ -137,3 +137,10 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+
+/**
+ * user defined styles
+ * -------------------------------------------------------------------------- */
+
+.doc-list ul{list-style: none;}
+.doc-list ul li a{text-decoration: none;}

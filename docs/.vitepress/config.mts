@@ -3,8 +3,9 @@ import { SitemapStream } from 'sitemap'
 import { createWriteStream } from 'node:fs'
 import path from 'node:path'
 
-import FRONTMATTER_DATA from "./theme/get-frontmatter-data";
-import { BLOG_HOST } from './constants';
+import FRONTMATTER_DATA from "./theme/get-frontmatter-data.js";
+import { BLOG_HOST } from './constants.js';
+import { genFeed } from './gen-feed.js';
 
 // frontmatter → sidebar
 console.log("🚀 generating sidebar...");
@@ -37,7 +38,6 @@ const vitePressOptions: UserConfig<DefaultTheme.Config> = {
     logo: "/favicon.ico",
     siteTitle: "ZXS",
     nav: [
-      { text: 'Posts', link: '/posts' },
       { text: 'App', link: `${BLOG_HOST}/ng` }
     ],
     search: { provider: "local" },
@@ -53,27 +53,28 @@ const vitePressOptions: UserConfig<DefaultTheme.Config> = {
       message: '<a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2024050501号-1</a>'
     }
   },
-  buildEnd: async ({ outDir }) => {
-    // https://laros.io/generating-a-dynamic-sitemap-with-vitepress
-    console.log("🚀 Generating sitemap...");
-    const sitemap = new SitemapStream({ hostname: BLOG_HOST });
-    const pages = await createContentLoader('*.md').load();
-    const writeStream = createWriteStream(path.resolve(outDir, 'sitemap.xml'));
-    sitemap.pipe(writeStream);
-    const basePath = "/blog"
-    pages.forEach((page) => sitemap.write(
-      page.url
-        // Strip `index.html` from URL
-        .replace(/index.html$/g, '')
-        // Optional: if Markdown files are located in a subfolder
-        .replace(/^\/docs/, basePath)
-    ));
-    sitemap.end();
-    await new Promise((resolve) => writeStream.on('finish', () => {
-      console.log("👏 sitemap.xml generated!");
-      resolve(true);
-    }));
-  }
+  buildEnd: genFeed
+  // buildEnd: async ({ outDir }) => {
+  //   // https://laros.io/generating-a-dynamic-sitemap-with-vitepress
+  //   console.log("🚀 Generating sitemap...");
+  //   const sitemap = new SitemapStream({ hostname: BLOG_HOST });
+  //   const pages = await createContentLoader('*.md').load();
+  //   const writeStream = createWriteStream(path.resolve(outDir, 'sitemap.xml'));
+  //   sitemap.pipe(writeStream);
+  //   const basePath = "/blog"
+  //   pages.forEach((page) => sitemap.write(
+  //     page.url
+  //       // Strip `index.html` from URL
+  //       .replace(/index.html$/g, '')
+  //       // Optional: if Markdown files are located in a subfolder
+  //       .replace(/^\/docs/, basePath)
+  //   ));
+  //   sitemap.end();
+  //   await new Promise((resolve) => writeStream.on('finish', () => {
+  //     console.log("👏 sitemap.xml generated!");
+  //     resolve(true);
+  //   }));
+  // }
 };
 
 export default defineConfig(vitePressOptions);

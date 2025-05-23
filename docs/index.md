@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "ZXS's blog"
-  text: ""
+  text: "Please scroll down to see more"
   tagline: ""
   actions:
     - theme: brand
@@ -31,3 +31,21 @@ features:
 sidebar: false
 
 ---
+
+<script setup lang="ts">
+import { useData } from 'vitepress'
+const data=useData();
+const site=data.site;
+const theme = data.theme;
+
+const base = site.base;
+</script>
+
+<section class="doc-list" v-for="item in theme.sidebar" :key="item.text">
+    <strong>{{ item.text }}</strong>
+    <ul>
+        <li v-for="child in item.items" :key="child.text">
+            <a :href="site.base+child.link.substring(1)">{{ child.text }}</a>
+        </li>
+    </ul>
+</section>
