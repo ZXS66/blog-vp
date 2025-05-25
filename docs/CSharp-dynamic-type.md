@@ -49,9 +49,9 @@ tags: [csharp, dynamic, anonymous type, var]
 
 ![Anonymous type, compiled assembly](/img/csharp-dynamic-type/anonymous-type-2.png)
 
-我的理解是这样的，`Anonymous` 类型是一种泛型，类似于元组 `Tuple`，不同的是，你不需要书写 `Tuple` 或者 `Anonymous` 这样的关键字。[<fa-link/>](https://docs.microsoft.com/en-us/dotnet/standard/base-types/choosing-between-anonymous-and-tuple)
+我的理解是这样的，`Anonymous` 类型是一种泛型，类似于元组 `Tuple`，不同的是，你不需要书写 `Tuple` 或者 `Anonymous` 这样的关键字。<ZLink link="https://docs.microsoft.com/en-us/dotnet/standard/base-types/choosing-between-anonymous-and-tuple"/>
 
-其实，更常见的场景是，我们在用 `LINQ` 的时候会用到 `Anonymous` 类型 [<fa-link/>](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/features-that-support-linq#anonymous-types)。
+其实，更常见的场景是，我们在用 `LINQ` 的时候会用到 `Anonymous` 类型 <ZLink link="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/features-that-support-linq#anonymous-types"/>。
 
 ## 引用链接
 

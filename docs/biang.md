@@ -16,7 +16,7 @@ date: 2021-01-31 09:46:29
 
 Unicode 码： [u30ede](https://glyphwiki.org/wiki/u30ede) （繁体，日常使用版本）,[u30edd](https://glyphwiki.org/wiki/u30edd) （简体）
 
-更多请点击 [<fa-link/>](http://ftp.unicode.org/Public/UNIDATA/USourceGlyphs.pdf)
+更多请点击 <ZLink link="http://ftp.unicode.org/Public/UNIDATA/USourceGlyphs.pdf"/>
 
 所以，如果你的电脑下载了相关的字体扩展/插件，或者更新了最新版的 Unicode 字符集，则可以正常输入和显示这个汉字。
 

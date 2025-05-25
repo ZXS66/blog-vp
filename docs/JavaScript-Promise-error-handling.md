@@ -22,7 +22,7 @@ date: 2021-06-19 17:34:03
 
 ## 最佳实践 
 
-根据 [MDN](https://developer.mozilla.org) 的文章 [<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#common_mistakes) 推荐，一般 `Promise` 链的最佳实践满足以下三个条件：
+根据 [MDN](https://developer.mozilla.org) 的文章 <ZLink link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#common_mistakes"/> 推荐，一般 `Promise` 链的最佳实践满足以下三个条件：
 
 1. 内链返回新的 `Promise`；
 2. 避免不必要的嵌套；

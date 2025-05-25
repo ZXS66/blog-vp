@@ -15,9 +15,9 @@ date: 2021-01-15 11:04:45
 
 ## 离线安装 Visual Studio
 
-微软很“贴心”的给出了离线安装的指引[<fa-link/>](https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019)：
+微软很“贴心”的给出了离线安装的指引 <ZLink link="https://docs.microsoft.com/en-us/visualstudio/install/create-an-offline-installation-of-visual-studio?view=vs-2019"/> ：
 
-简单来说，有两种方式，图形化（GUI）或者命令行（Command Line)：
+简单来说，有两种方式，图形化（GUI）或者命令行（Command Line）：
 
 ### 图形化下载安装方式
 
@@ -67,7 +67,7 @@ date: 2021-01-15 11:04:45
 
 可以选择上 [NuGet 官网](https://www.nuget.org/) 搜索对应的包名然后点击 “Download package” 下载，或者使用 [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)。
 
-## 指定 NuGet Package Manager 本地安装库 [<fa-link/>](https://social.technet.microsoft.com/wiki/contents/articles/25127.nuget-offline-package.aspx)
+## 指定 NuGet Package Manager 本地安装库 <ZLink link="https://social.technet.microsoft.com/wiki/contents/articles/25127.nuget-offline-package.aspx"/>
 
 打开菜单：Tools --> NuGet Package Manager --> Package Manager Settings，点击 Package Source Tab，点击 + 图标，选择离线安装包所在目录，点击 OK。
 

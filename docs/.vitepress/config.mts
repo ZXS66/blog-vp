@@ -50,7 +50,7 @@ const vitePressOptions: UserConfig<DefaultTheme.Config> = {
     ],
     footer: {
       copyright: "Copyright © 2020-present ZXS",
-      message: '<a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2024050501号-1</a>'
+      message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2024050501号-1</a>'
     }
   },
   buildEnd: genFeed

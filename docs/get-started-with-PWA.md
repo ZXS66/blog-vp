@@ -12,7 +12,7 @@ date: 2021-05-06 12:54:15
 
 ## PWA 介绍
 
-此处省略一万字。[<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+此处省略一万字。<ZLink link="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"/>
 
 ## 起步
 

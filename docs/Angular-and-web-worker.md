@@ -223,7 +223,7 @@ export class WorkerMessage {
 ## 拉出来遛一遛
 
 <script setup>const myAppLink=`${window.location.origin}/ng`;</script>
-<a :href="myAppLink" target="_blank"><i class="mdui-icon material-icons">search</i> Emoji 搜索工具</a>
+<a :href="myAppLink" target="_blank" rel="noopener noreferrer"><i class="mdui-icon material-icons">search</i> Emoji 搜索工具</a>
 
 emmmm，一切都按照预期走了，没什么问题。除了：Google Chrome 调试 Web Worker 真的是鸡肋！！！以后真的在项目中大量使用了再说吧。。。。。。
 

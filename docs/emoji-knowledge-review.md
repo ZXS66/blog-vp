@@ -50,7 +50,7 @@ date: 2021-10-16 22:15:25
 ## Emoji 搜索
 
 <script setup>const myAppLink=`${window.location.origin}/ng`;</script>
-<a :href="myAppLink" target="_blank"><i class="mdui-icon material-icons">search</i> Emoji 搜索工具</a>
+<a :href="myAppLink" target="_blank" rel="noopener noreferrer"><i class="mdui-icon material-icons">search</i> Emoji 搜索工具</a>
 
 ## Emoji 清单
 

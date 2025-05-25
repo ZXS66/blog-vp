@@ -25,10 +25,10 @@ date: 2022-05-13 11:24:33
 
 1. 右键项目，“发布”；
 2. 选择“文件夹发布”；
-3. 更换部署模式为“Self-contained”，根据目标机器类型 [<fa-link/>](https://docs.microsoft.com/en-us/dotnet/core/deploying/deploy-with-vs?tabs=vs156)：
+3. 更换部署模式为“Self-contained”，根据目标机器类型<ZLink link="https://docs.microsoft.com/en-us/dotnet/core/deploying/deploy-with-vs?tabs=vs156"/>：
 ![publish profile](/img/dotnet-core-build-standalone-executable-program/publish_profile.png)
 
-当然，上述操作可以使用 `.NET Core CLI` 达到相同目的 [<fa-link/>](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish)
+当然，上述操作可以使用 `.NET Core CLI` 达到相同目的<ZLink link="https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish"/>。
 
 ### 参考链接
 

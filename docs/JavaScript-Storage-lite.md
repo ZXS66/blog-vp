@@ -20,13 +20,13 @@ date: 2021-06-29 17:41:15
 
 ## IndexedDB
 
-光看它的 API 文档 [<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)，就已经晕了😵。简单理解就是，前端的事务性数据库。所以，它能够支持大量数据存储/查询。根据官方介绍 [<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)，`IndexedDB` 最多能存硬盘的 50%，每个组（简单理解为一个站点）能存最少 10MB 最多 2GB！简直不要太开心~
+光看它的 API 文档 <ZLink link="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API"/>，就已经晕了😵。简单理解就是，前端的事务性数据库。所以，它能够支持大量数据存储/查询。根据官方介绍 <ZLink link="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria"/>，`IndexedDB` 最多能存硬盘的 50%，每个组（简单理解为一个站点）能存最少 10MB 最多 2GB！简直不要太开心~
 
-不过考虑到上手难度极高，一般都会使用第三方库 [<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#see_also) 来操作 `IndexedDB`。
+不过考虑到上手难度极高，一般都会使用第三方库 <ZLink link="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API#see_also"/> 来操作 `IndexedDB`。
 
 ## Web SQL
 
-注意，Web SQL 并不是 `HTML 5` 标准，目前仅支持 Chromium 系的浏览器 [<fa-link/>](https://caniuse.com/sql-storage)。虽然以前 [W3C 提案](https://www.w3.org/TR/webdatabase/) 过，但早就舍弃了。所以，不用看了！
+注意，Web SQL 并不是 `HTML 5` 标准，目前仅支持 Chromium 系的浏览器 <ZLink link="https://caniuse.com/sql-storage"/>。虽然以前 [W3C 提案](https://www.w3.org/TR/webdatabase/) 过，但早就舍弃了。所以，不用看了！
 
 ~~使用方法也炒鸡简单，仅三个基础 API：opendatabase、transaction、executeSql。~~
 

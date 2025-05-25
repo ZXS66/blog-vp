@@ -10,15 +10,15 @@ tags: [cdn, javascript, failover, async, defer, execution order]
 
 ## SRI 检查
 
-[SRI](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) 是一种安全机制，让浏览器通过验证它接收到的资源（比如从 CDN）是未经过更改的。简单理解就是浏览器把（从 CDN）拿到的资源进行哈希计算，然后把这个哈希值与开发者事先计算好的哈希值（integrity) 匹配。目前[大多数浏览器都支持 SRI 检查](https://caniuse.com/#feat=subresource-integrity)(emmm，除了 IE)。 
+[SRI](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity) 是一种安全机制，让浏览器通过验证它接收到的资源（比如从 CDN）是未经过更改的。简单理解就是浏览器把（从 CDN）拿到的资源进行哈希计算，然后把这个哈希值与开发者事先计算好的哈希值（integrity） 匹配。目前[大多数浏览器都支持 SRI 检查](https://caniuse.com/#feat=subresource-integrity)(emmm，除了 IE)。
 
-实际使用很简单，就是指定 `script` 或 `link` 标签的 `integrity` 属性，值为事先计算的该静态资源的哈希值（sha256，sha384，sha512中的一个或多个） [<fa-link/>](https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#Using_Subresource_Integrity)。MDN 推荐了一个 [SRI Hash Generator](https://www.srihash.org/) *（有一个缺点，只能生成 script 便签，不能根据 css 文件成 link 标签，需要手动调整）*
+实际使用很简单，就是指定 `script` 或 `link` 标签的 `integrity` 属性，值为事先计算的该静态资源的哈希值（sha256，sha384，sha512中的一个或多个） <ZLink link="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity#Using_Subresource_Integrity"/>。MDN 推荐了一个 [SRI Hash Generator](https://www.srihash.org/) *（有一个缺点，只能生成 script 便签，不能根据 css 文件成 link 标签，需要手动调整）*
 
 需要注意的是，一般需要 SRI 检查的静态资源都在 CDN 上，所以都是需要开启 CORS。好在 CDN 默认都开启了，我们需要做的是浏览器端手动添加上 [crossorigin 属性](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes)，不然可能会出错 :(
 
 ## 标记 script 标签为 async 或 defer
 
-下面是 `script` 标签的属性（`async`、`defer`、`module`、`nomodule`等）常用场景 [<fa-link/>](https://gist.github.com/jakub-g/385ee6b41085303a53ad92c7c8afd7a6)：
+下面是 `script` 标签的属性（`async`、`defer`、`module`、`nomodule`等）常用场景 <ZLink link="https://gist.github.com/jakub-g/385ee6b41085303a53ad92c7c8afd7a6"/>：
 
 |`script`标签类型        |常见使用场景                     |
 |------------|-------------------------------------|
@@ -49,7 +49,7 @@ tags: [cdn, javascript, failover, async, defer, execution order]
 cdn: https://cdn.bootcdn.net/ajax/libs/
 ```
 
-### 使用 [Hexo 默认的 helper 方法](https://hexo.io/docs/helpers.html) js/css 生成 script/link 标签。
+### 使用 [Hexo 默认的 helper 方法](https://hexo.io/docs/helpers.html) js/css 生成 script/link 标签
 
 👇 after-footer.ejs
 
@@ -103,7 +103,7 @@ hexo.extend.helper.register("js_cdn", function(item) {
 
 以下是示例代码（`js/script.js`）：
 
-``` js
+``` js {31}
 (function() {
   var dependencies = [
     {
@@ -167,13 +167,13 @@ hexo.extend.helper.register("js_cdn", function(item) {
 
 所以，如果没有这行语句，默认这些 `script` 会按 `async` 的方式去执行（脚本下载成功立即执行），也就是说，可能会出现后面的脚本先被执行的情况。但是后面的脚本依赖于前面的脚本，立即执行会报错。
 
-![](/img/cdn-failover/dependent%20script%20execution%20error.png)
+![dependent script execution error](/img/cdn-failover/dependent%20script%20execution%20error.png)
 
 受 [这篇文章](https://www.html5rocks.com/en/tutorials/speed/script-loading/) 启发，加上上面说的这条语句，就可以确保 async 的脚本的执行顺序了。
 
 调整完之后的脚本下载时间不变，但是不报错了，因为执行顺序对上了。
 
-![](/img/cdn-failover/async%20script%20execution%20order.png)
+![async script execution order](/img/cdn-failover/async%20script%20execution%20order.png)
 
 当然，这个脚本还有很大的提升空间（比如，`Promise` 在低版本浏览器兼容问题），这里暂时就不浪费体力了。
 

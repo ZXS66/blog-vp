@@ -58,9 +58,9 @@ SELECT col_name FROM tbl_name AS a WHERE a.col_name = 1 OR A.col_name = 2;
 
 emmm，第一个推荐方法，我不能更改 `Linux` 上的 `MySQL` 啊，人家那是产品环境；第二个推荐办法，更改部署在 `Windows` 上的 `MySQL` 目标数据库配置？听起来似乎可行？且慢：
 
-> `lower_case_table_names` 仅能在初始化服务器的时候设置。在服务器初始化之后更改 `lower_case_table_names` 设置是被禁止的。[<fa-link/>](https://dev.mysql.com/doc/refman/8.0/en/identifier-case-sensitivity.html)
+> `lower_case_table_names` 仅能在初始化服务器的时候设置。在服务器初始化之后更改 `lower_case_table_names` 设置是被禁止的。<ZLink link="https://dev.mysql.com/doc/refman/8.0/en/identifier-case-sensitivity.html"/>
 
-> 禁止在服务器初始化之后，使用不同的 `lower_case_table_names` 设置来启动服务器。该限制十分必要，因为各种数据字典表字段使用的排序规则是由初始化服务器时的设置决定，使用不同的设置重新启动服务器会在标识符的排序和比较方式方面引入不一致。 [<fa-link/>](https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names)
+> 禁止在服务器初始化之后，使用不同的 `lower_case_table_names` 设置来启动服务器。该限制十分必要，因为各种数据字典表字段使用的排序规则是由初始化服务器时的设置决定，使用不同的设置重新启动服务器会在标识符的排序和比较方式方面引入不一致。 <ZLink link="https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_lower_case_table_names"/>
 
 以下是初始化服务器时的设置：
 

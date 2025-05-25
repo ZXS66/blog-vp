@@ -28,7 +28,7 @@ tags: [flutter, get started]
 git clone https://github.com/flutter/flutter.git -b beta
 ```
 
-### 2. 更新环境变量 [<fa-link/>](https://flutter.cn/docs/get-started/install/windows)
+### 2. 更新环境变量 <ZLink link="https://flutter.cn/docs/get-started/install/windows"/>
 
 将 `flutter\bin` 添加至环境变量 `PATH`。Linux 和 Mac 用户命令行搞定：
 
@@ -38,7 +38,7 @@ export PATH="$PWD/flutter/bin:$PATH"
 
 Windows 用户可以选择鼠标点点，更改环境变量 （我的电脑->属性->高级系统设置->环境变量->用户变量）
 
-### 3. 配置 flutter 使用镜像站点 [<fa-link/>](https://flutter.cn/docs/get-started/install/windows)
+### 3. 配置 flutter 使用镜像站点 <ZLink link="https://flutter.cn/docs/get-started/install/windows"/>
 
 Flutter 官方站点 (https://flutter.dev) 是在境外，被小镇禁止访问了，所以，此步骤是小镇用户需要做的额外操作。
 
@@ -65,7 +65,7 @@ export FLUTTER_STORAGE_BASE_URL: https://mirrors.tuna.tsinghua.edu.cn/flutter
 export PUB_HOSTED_URL: https://mirrors.tuna.tsinghua.edu.cn/dart-pub
 ```
 
-### 4. 初始化 [<fa-link/>](https://flutter.cn/docs/get-started/web)
+### 4. 初始化 <ZLink link="https://flutter.cn/docs/get-started/web"/>
 
 ``` shell
 flutter channel beta
@@ -74,7 +74,7 @@ flutter config --enable-web
 ```
 *备注：初始化过程中，可能会遇到下载失败问题，这时候可以参照第三步骤，切换镜像站点，并检查您此时的网络链接是否可以访问到镜像站点*
 
-### 5. 验证安装 [<fa-link/>](https://flutter.cn/docs/get-started/web)
+### 5. 验证安装 <ZLink link="https://flutter.cn/docs/get-started/web"/>
 
 ``` shell
 flutter devices
@@ -85,7 +85,7 @@ flutter doctor
 
 如果 `flutter devices` 书出一个名为 Chrome 的设备信息，则表示所有的安装、配置均完成。
 
-## Hello, World! [<fa-link/>](https://flutter.cn/docs/get-started/web)
+## Hello, World! <ZLink link="https://flutter.cn/docs/get-started/web"/>
 
 ``` shell
 flutter create testflutter
@@ -97,7 +97,7 @@ flutter run -d chrome --web-hostname=127.0.0.1
 
 ![flutter run -d chrome --web-hostname=127.0.0.1](/img/flutter/flutter%20run.png)
 
-## 编译、部署 [<fa-link/>](https://flutter.cn/docs/deployment/web)
+## 编译、部署 <ZLink link="https://flutter.cn/docs/deployment/web"/>
 
 编译：
 

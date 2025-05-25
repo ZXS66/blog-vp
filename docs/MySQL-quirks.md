@@ -9,7 +9,7 @@ date: 2022-03-31 11:03:50
 
 ## MySQL 即时查询窗口不支持 IF 表达式
 
-对于我这个菜鸡来说，虽然听起来很不可思议，但这是真的，你没（mèi）听错。根据 MySQL [官方文档](https://dev.mysql.com/doc/refman/8.0/en/if.html)，IF 表达式仅可以在存储程序（存储过程或函数）中适用（除此之外，还有一个 [IF 函数](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_if)），即时查询窗口中用不了！早在 2008 年就有大佬报怨 [<fa-link/>](https://www.bennadel.com/blog/1340-mysql-does-not-support-if-else-statements-in-general-sql-work-flow.htm)，都 2022 年了，这个问题还没有解决，也不知道 MySQL 团队是咋想的。
+对于我这个菜鸡来说，虽然听起来很不可思议，但这是真的，你没（mèi）听错。根据 MySQL [官方文档](https://dev.mysql.com/doc/refman/8.0/en/if.html)，IF 表达式仅可以在存储程序（存储过程或函数）中适用（除此之外，还有一个 [IF 函数](https://dev.mysql.com/doc/refman/8.0/en/flow-control-functions.html#function_if)），即时查询窗口中用不了！早在 2008 年就有大佬报怨 <ZLink link="https://www.bennadel.com/blog/1340-mysql-does-not-support-if-else-statements-in-general-sql-work-flow.htm"/>，都 2022 年了，这个问题还没有解决，也不知道 MySQL 团队是咋想的。
 
 BTW，[Oracle 开发工程师离职后怒喷 MySQL 很烂](https://www.theregister.com/2021/12/06/mysql_a_pretty_poor_database/) 这条新闻，去年就上了热搜，说起来确实是个笑话。
 
