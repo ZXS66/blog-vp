@@ -35,11 +35,11 @@ date: 2022-02-03 23:28:57
   discovery.type: single-node
   ```
 3. 配置 `elasticsearch` 环境变量：因为 `elasticsearch` 是基于 `Apache Lucene` 构建的，所以 `Java` 虚拟机是必须的。为了减少小白用户的困扰，目前，`elasticsearch` 在下载好的 zip 包中已包含了 `jdk` (Open Java 版本) 的子文件夹。配置很简单，只需要设置 `ES_HOME`(`elasticsearch` zip 包解压文件夹) 和 `ES_JAVA_HOME`(`%ES_HOME%\jdk`) 两个环境变量即可。当然，如果你电脑已经安装了 `JDK`，那 `JAVA_HOME` 肯定已经配置好了，这个时候如果没有配置 `ES_JAVA_HOME`，`elasticsearch` 就会回滚读取 `JAVA_HOME` 里的 `jdk` 了
-4. 设置 `elasticsearch` 密码 [<i class="mdui-icon material-icons">link</i>](https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html)：
+4. 设置 `elasticsearch` 密码 <ZLink link="https://www.elastic.co/guide/en/elasticsearch/reference/7.16/security-minimal-setup.html"/>：
   1. 进入 `ES_HOME` 目录，运行 `./bin/elasticsearch.bat` 命令;
   2. 进入 `ES_HOME` 目录，运行 `./bin/elasticsearch-setup-passwords.bat interactive` 命令，会提示给默认的几个账户(`apm_system`、`kibana_system`、`kibana`、`logstash_system`、`beats_system`、`remote_monitoring_user`、`elastic`)设置密码;
   3. 打开浏览器，输入网址 [http://192.168.0.8:9200](http://192.168.0.8:9200) 检查一下 ES 是否正常运行（需要提供上一步设置的用户名密码）。
-5. 注册 `elasticsearch` 成为 `Windows` 服务（可选）[<i class="mdui-icon material-icons">link</i>](https://www.elastic.co/guide/en/elasticsearch/reference/7.16/zip-windows.html)：进入 `ES_HOME` 目录，运行 `./bin/elasticsearch-service.bat install` 命令
+5. 注册 `elasticsearch` 成为 `Windows` 服务（可选）<ZLink link="https://www.elastic.co/guide/en/elasticsearch/reference/7.16/zip-windows.html"/>：进入 `ES_HOME` 目录，运行 `./bin/elasticsearch-service.bat install` 命令
 6. 更改 `kibana-7.16.3-windows-x86_64/config/kibana.yml` 配置如下(可根据实际情况做调整)：
   ``` kibana.yml
   server.host: "192.168.0.8"

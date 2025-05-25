@@ -11,7 +11,8 @@ date: 2022-01-21 17:21:59
 
 为此，记录一下我遇到的一些 `Python` 常见问题，以后再遇到直接翻这篇文章就好了。
 
-## 设置 pip 镜像源 
+## 设置 pip 镜像源
+
 `pip install` 默认使用的是 [pypi.org](https://pypi.org) 的镜像源。国内虽然也能访问，但访问速度有限，偶尔还会抽风。为此，推荐使用国内镜像源，比如清华大学、阿里云什么的。比如下面脚本就是全局设置清华大学数据源。
 
 ``` sh
@@ -80,6 +81,7 @@ print('-'*16)
 ```
 
 输出：
+
 ```
 ----------------
 d1.kind canine
@@ -167,7 +169,7 @@ pip install playwright
 playwright install
 ```
 
-上述命令，虽然第一个命令成功执行，第二个依然报错 `the term 'playwright' is not recognized`。通过检查，发现 `Python` 安装目录以及 `Scripts` 子目录都已经放到环境变量里了。解决办法是，还需要把用户目录里的 `Python/Scripts` 也加到环境变量中。[<i class="mdui-icon material-icons">link</i>](https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-to-the-user-site)
+上述命令，虽然第一个命令成功执行，第二个依然报错 `the term 'playwright' is not recognized`。通过检查，发现 `Python` 安装目录以及 `Scripts` 子目录都已经放到环境变量里了。解决办法是，还需要把用户目录里的 `Python/Scripts` 也加到环境变量中。<ZLink link="https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-to-the-user-site"/>
 
 ```
 %USERPROFILE%\AppData\Roaming\Python\Python310\Scripts

@@ -16,7 +16,7 @@ date: 2021-05-06 12:54:15
 
 ## 起步
 
-参考的是 [<i class="mdui-icon material-icons">link</i> 这篇文档](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/get-started)。~~此处又省略了一万字。~~
+参考的是 [这篇文档](https://docs.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/get-started)。~~此处又省略了一万字。~~
 
 ## 一个小 bug
 

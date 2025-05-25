@@ -31,6 +31,12 @@ const vitePressOptions: UserConfig<DefaultTheme.Config> = {
   cleanUrls: true,
   base: "/blog/",
   lang: "zh-CN",
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
+    // ['link', { rel: 'manifest', href: '/manifest.json' }],
+    // ['meta', { name: 'theme-color', content: '#ffffff' }],
+  ],
   markdown: { image: { lazyLoading: true } },
   srcExclude: ["deleted/*.md"],
   themeConfig: {

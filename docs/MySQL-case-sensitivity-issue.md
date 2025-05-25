@@ -70,9 +70,9 @@ emmm，第一个推荐方法，我不能更改 `Linux` 上的 `MySQL` 啊，人�
 
 什么鬼，推荐了两个不能用的办法???
 
-那还有没有其他办法？我先去倒杯咖啡，冷静一下！<i class="mdui-icon material-icons">free_breakfast</i>
+那还有没有其他办法？我先去倒杯咖啡，冷静一下！<fa-icon icon="mug-hot"/>
 
-<i class="mdui-icon material-icons">lightbulb_outline</i> 有了！既然服务器配置无法更改，那我试试改数据库配置？我记得，`MySQL` 数据库中有一个编码问题（`utf8`、`latin` 等等），还有一个 `collation` 问题。
+<fa-icon icon="lightbulb" /> 有了！既然服务器配置无法更改，那我试试改数据库配置？我记得，`MySQL` 数据库中有一个编码问题（`utf8`、`latin` 等等），还有一个 `collation` 问题。
 
 OK，先调研，再备份，再动手。
 

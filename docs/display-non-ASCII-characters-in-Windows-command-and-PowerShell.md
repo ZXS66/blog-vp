@@ -14,7 +14,7 @@ date: 2022-03-04 23:14:48
 
 为什么会出现这种情况？简单来讲：
 
-> It does not make sense to have a string without knowing what encoding it uses. [<i class="mdui-icon material-icons">link</i>](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+> It does not make sense to have a string without knowing what encoding it uses. <ZLink link="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/"/>
 > 一个字符串如果不知道它用的编码，将毫无意义。
 > <cite>Joel Spolsky</cite>
 

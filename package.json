@@ -8,6 +8,9 @@
   "author": "ZXS",
   "license": "MIT",
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@types/node": "^22.15.18",
     "@vitejs/plugin-vue": "^5.2.4",
     "feed": "^5.0.1",

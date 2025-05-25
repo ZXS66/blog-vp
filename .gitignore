@@ -156,4 +156,4 @@ yarn.lock
 
 # project files
 # credentials
-deploy.sh
+publish.sh
