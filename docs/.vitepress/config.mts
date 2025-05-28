@@ -1,7 +1,4 @@
-import { DefaultTheme, UserConfig, createContentLoader, defineConfig } from 'vitepress';
-import { SitemapStream } from 'sitemap'
-import { createWriteStream } from 'node:fs'
-import path from 'node:path'
+import { DefaultTheme, UserConfig, defineConfig } from 'vitepress';
 
 import FRONTMATTER_DATA from "./theme/get-frontmatter-data.js";
 import { BLOG_HOST } from './constants.js';

@@ -15,7 +15,6 @@
     "@vitejs/plugin-vue": "^5.2.4",
     "feed": "^5.0.1",
     "gray-matter": "^4.0.3",
-    "sitemap": "^8.0.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vitepress": "^1.6.3",
