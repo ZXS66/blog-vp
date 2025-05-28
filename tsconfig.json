@@ -3,16 +3,23 @@
         "module": "NodeNext",
         "allowJs": true,
         "strict": true,
-        "jsx": "preserve"
+        "jsx": "preserve",
+        "types": [
+            "vitepress",
+            "vue"
+        ]
     },
     "exclude": [
         "node_modules"
     ],
-    "files": ["placeholder.ts"],
+    "files": [
+        "placeholder.ts"
+    ],
     "include": [
         "docs/**/*.ts",
         "docs/**/*.vue",
         "docs/**/*.md",
+        ".vitepress/theme/**/*"
     ],
     "vueCompilerOptions": {
         "vitePressExtensions": [
