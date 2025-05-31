@@ -1,19 +1,19 @@
 <template>
-  <a :href="link" target="_blank" rel="noopener noreferrer">
-    {{ text || '🔗' }}
+  <a :href="link" target="_blank" :rel="rel">
+    <slot>🔗</slot>
   </a>
 </template>
 
-<script setup>
-defineProps({
+<script setup lang="ts">
+import { defineProps, computed } from 'vue';
+const props = defineProps({
   link: {
     type: String,
     required: true
-  },
-  text: {
-    type: String,
-    default: null
   }
+});
+const rel = computed(() => {
+  return props.link.startsWith('https://') || props.link.startsWith('http://') ? 'noopener noreferrer' : '';
 });
 </script>
 

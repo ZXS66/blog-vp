@@ -73,7 +73,7 @@ deb https://mirror.sjtu.edu.cn/ubuntu/ jammy-security main restricted universe m
 
 ### GitHub 访问加速
 
-其实，现在好多办法都可以加速访问 [GitHub](https://github.com)，我这里介绍一种特别原始的办法，就是修改 hosts 文件。
+其实，现在好多办法都可以加速访问 [<font-awesome-icon icon="fa-brands fa-github" />GitHub](https://github.com)，我这里介绍一种特别原始的办法，就是修改 hosts 文件。
 
 1. 以管理员权限，打开记事本
 2. 记事本中打开 `C:\Windows\System32\drivers\etc\hosts` 文件

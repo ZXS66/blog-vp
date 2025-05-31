@@ -17,6 +17,10 @@ import {
   faSearch,
   faUserSecret,
 } from '@fortawesome/free-solid-svg-icons'
+import {
+  faGithub,
+  faVuejs
+} from "@fortawesome/free-brands-svg-icons";
 
 import './style.css';
 import MyLayout from "./MyLayout.vue";
@@ -25,10 +29,12 @@ import ZLink from "../components/ZLink.vue";
 /* add icons to the library */
 library.add(
   faBell,
+  faGithub,
   faLightbulb,
   faMugHot,
   faSearch,
-  faUserSecret
+  faUserSecret,
+  faVuejs,
 );
 
 export default {
@@ -41,7 +47,7 @@ export default {
   Layout: MyLayout,
   enhanceApp({ app, router, siteData }) {
     // register your custom global components
-    app.component('fa-icon', FontAwesomeIcon);
+    app.component('font-awesome-icon', FontAwesomeIcon);
     app.component('ZLink', ZLink);
   }
 } satisfies Theme;

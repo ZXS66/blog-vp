@@ -45,7 +45,7 @@ ng update --all --force
 
 ## 跑起来，确保升级之后应用仍可以正常运行且编译（很重要！！！）
 
-一般情况下都是可以的正常运行的。真碰见问题，问 [Github](https://github.com/angular/angular/issues/) 或者搜索引擎。
+一般情况下都是可以的正常运行的。真碰见问题，问 [<font-awesome-icon icon="fa-brands fa-github" />](https://github.com/angular/angular/issues/) 或者搜索引擎。
 
 好了，终于可以进入正题啦！
 
@@ -222,9 +222,13 @@ export class WorkerMessage {
 
 ## 拉出来遛一遛
 
-<script setup>const myAppLink=`${window.location.origin}/ng/#/lab/emoji`;</script>
+<script setup lang="ts">
+const myAppLink=`${window.location.origin}/ng/#/lab/emoji`;
+</script>
 
-<a :href="myAppLink" target="_blank" rel="noopener noreferrer"><fa-icon icon="search"/> Emoji 搜索工具</a>
+<ZLink :link="myAppLink">
+<font-awesome-icon icon="search"/> Emoji 搜索工具
+</ZLink>
 
 emmmm，一切都按照预期走了，没什么问题。除了：Google Chrome 调试 Web Worker 真的是鸡肋！！！以后真的在项目中大量使用了再说吧。。。。。。
 
@@ -233,4 +237,4 @@ emmmm，一切都按照预期走了，没什么问题。除了：Google Chrome �
 - [Using Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [The Basics of Web Workers](https://www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted)
 - [Functions and classes available to Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
-- [Web Worker 文献综述](https://github.com/CntChen/cntchen.github.io/issues/19)
+- [<font-awesome-icon icon="fa-brands fa-github" /> Web Worker 文献综述](https://github.com/CntChen/cntchen.github.io/issues/19)

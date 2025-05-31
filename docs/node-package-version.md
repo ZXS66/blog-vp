@@ -6,7 +6,7 @@ tags: [node, package.json]
 
 ## 背景
 
-复习时间到啦 <fa-icon icon="bell" />
+复习时间到啦 <font-awesome-icon icon="bell" />
 
 突然脑子不灵光了，不记得 `package.json` 文件下面的包，带 `^` 和 `~` 有什么区别了，看来是上年纪了。
 

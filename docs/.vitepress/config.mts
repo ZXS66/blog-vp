@@ -46,14 +46,13 @@ const vitePressOptions: UserConfig<DefaultTheme.Config> = {
     search: { provider: "local" },
     sidebar,
     socialLinks: [
-      // https://simpleicons.org/
       { icon: 'github', link: 'https://github.com/ZXS66' },
       { icon: 'wechat', link: `${BLOG_HOST}/blog/static/qrcode.html?data=https://u.wechat.com/ENx87m7_oPP-mj2Ur-ffHIY` },
       { icon: { svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"/></svg>' }, link: "mailto:zh_cn2008@hotmail.com" }
     ],
     footer: {
-      copyright: "Copyright © 2020-present ZXS",
-      message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2024050501号-1</a>'
+      message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2024050501号-1</a>',
+      copyright: "built with ❤ by ZXS",
     }
   },
   buildEnd: genFeed
